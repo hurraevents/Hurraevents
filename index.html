@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Húrra Events</title>
+<meta name="description" content="Húrra Events skipuleggur veislur, árshátíðir, brúðkaup, golfmót, ráðstefnur og fleiri viðburði. Þitt tilefni, þitt húrra.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="is_IS">
+<meta property="og:site_name" content="Húrra Events">
+<meta property="og:title" content="Húrra Events">
+<meta property="og:description" content="Húrra Events skipuleggur veislur, árshátíðir, brúðkaup, golfmót, ráðstefnur og fleiri viðburði. Þitt tilefni, þitt húrra.">
+<meta property="og:url" content="https://hurraevents.is/">
+<meta property="og:image" content="https://hurraevents.is/og-mynd.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0610">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Tilt+Neon&display=swap">
+<style>
+:root{--base:3.5s}
+.no-intro{--base:.05s}
+html{scroll-behavior:smooth}
+html.menu-open{overflow:hidden}
+body{margin:0;background:#0B0610;color:#F3E9F0;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#FFE3F0}a:hover{color:#FFFFFF}
+img,svg{max-width:100%}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- Kynning (neonskiltið) ---------- */
+@keyframes hNeonOn{
+0%{color:#3B2234;text-shadow:none}
+6%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}
+9%{color:#3B2234;text-shadow:none}
+15%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}
+18%{color:#3B2234;text-shadow:none}
+26%,100%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}}
+@keyframes hNeonBlue{
+0%{color:#23343A;text-shadow:none}
+8%{color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5,0 0 34px #22C7F0}
+12%{color:#23343A;text-shadow:none}
+30%,100%{color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5,0 0 34px #22C7F0}}
+@keyframes hGlow{0%,25%{opacity:0}60%,100%{opacity:1}}
+@keyframes hSlideUp{0%{transform:translateY(0)}100%{transform:translateY(-100%)}}
+@keyframes hRise{0%{opacity:0;transform:translateY(28px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes hBuzz{0%,92%,100%{opacity:1}93%{opacity:.4}94%{opacity:1}95.5%{opacity:.55}96.5%{opacity:1}}
+.h-intro{position:fixed;inset:0;z-index:50;background:#0B0610;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2vh;animation:hSlideUp .9s cubic-bezier(.7,0,.2,1) 3.1s both}
+.no-intro .h-intro{display:none}
+.h-glowbg{position:absolute;left:50%;top:50%;width:900px;max-width:120vw;height:440px;margin:-240px 0 0 -450px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,47,138,.24),rgba(255,47,138,0))}
+.h-word{position:relative;font-family:'Tilt Neon',sans-serif;font-size:clamp(88px,16vw,210px);line-height:1}
+.h-l{display:inline-block;color:#3B2234;animation:hNeonOn 1.5s linear both}
+.h-sub{position:relative;font-family:'Tilt Neon',sans-serif;font-size:clamp(22px,3.4vw,42px);letter-spacing:.45em;padding-left:.45em;color:#23343A;animation:hNeonBlue 1.3s linear 1.6s both}
+.h-glow{animation:hGlow 2.4s ease-out both}
+.h-rise{animation:hRise .9s cubic-bezier(.2,.8,.3,1) calc(var(--base) + var(--i,0) * .12s) both}
+.h-buzz{animation:hBuzz 8s linear 4s infinite}
+.h-skip{position:absolute;right:24px;bottom:24px;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid #4A3550;background:transparent;color:#D9CCD5;font:500 15px 'Inter',sans-serif;cursor:pointer}
+.h-skip:hover{border-color:#FF5FA2;color:#FFFFFF}
+
+/* ---------- Haus ---------- */
+.hd{position:fixed;top:0;left:0;right:0;z-index:30;border-bottom:1px solid transparent;transition:transform .45s cubic-bezier(.2,.8,.3,1),background-color .35s,border-color .35s}
+.hd.is-solid{background:rgba(11,6,16,.74);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:rgba(58,39,66,.7)}
+.hd.is-hidden{transform:translateY(-102%)}
+.hd-in{max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Tilt Neon',sans-serif;font-size:32px;line-height:1;color:#FFE3F0;text-shadow:0 0 5px #FF5FA2,0 0 14px #FF2F8A;text-decoration:none;white-space:nowrap}
+.logo:hover{color:#FFFFFF}
+.hd-nav{display:flex;align-items:center;gap:4px 28px;font-size:16px;font-weight:500}
+.hd-nav a{padding:12px 0;color:#D9CCD5;text-decoration:none}
+.hd-nav a:hover{color:#FFFFFF}
+.hd-nav .hd-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:1.5px solid #FF5FA2;color:#FFE3F0;transition:background .2s,box-shadow .2s}
+.hd-nav .hd-cta:hover{background:rgba(255,95,162,.12);box-shadow:0 0 18px rgba(255,47,138,.35)}
+.hd-burger{display:none;align-items:center;justify-content:center;width:46px;height:46px;padding:0;border-radius:50%;border:1.5px solid #4A3550;background:rgba(11,6,16,.45);color:#FFE3F0;cursor:pointer}
+.hd-burger:hover{border-color:#FF5FA2}
+@media (max-width:860px){.hd-nav{display:none}.hd-burger{display:inline-flex}.logo{font-size:28px}.hd-in{padding:14px 20px}}
+
+/* Valmynd í síma */
+.menu{position:fixed;inset:0;z-index:40;box-sizing:border-box;display:flex;flex-direction:column;padding:14px 20px 32px;overflow-y:auto;background:#0B0610}
+.menu[hidden]{display:none}
+.menu::before{content:"";position:absolute;left:50%;top:40%;width:700px;height:500px;margin:-250px 0 0 -350px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,47,138,.18),rgba(255,47,138,0));pointer-events:none}
+.menu-top{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:46px}
+.menu-nav{position:relative;display:flex;flex-direction:column;gap:4px;margin:auto 0;padding:40px 0}
+.menu-nav a{padding:8px 0;font-family:'Tilt Neon',sans-serif;font-size:clamp(36px,10.5vw,54px);line-height:1.15;color:#FFE3F0;text-decoration:none;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF2F8A;animation:menuOn 1s linear calc(var(--i) * .13s) both}
+.menu-nav a:nth-child(2){color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5}
+@keyframes menuOn{0%{opacity:.08}10%{opacity:1}15%{opacity:.12}25%{opacity:1}30%{opacity:.3}45%,100%{opacity:1}}
+.menu-mail{position:relative;margin:18px 0 0;text-align:center;font-size:15px;color:#B9A9B7}
+
+/* Hnappar */
+.btn-p,.btn-o{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:999px;font-size:17px;font-weight:600;text-decoration:none;box-sizing:border-box;transition:background .2s,box-shadow .2s,border-color .2s}
+.btn-p{background:#FF5FA2;color:#12091A;box-shadow:0 0 24px rgba(255,47,138,.45)}
+.btn-p:hover{background:#FF7BB3;color:#12091A;box-shadow:0 0 36px rgba(255,47,138,.65)}
+.btn-o{border:1.5px solid #4A3550;color:#FFFFFF}
+.btn-o:hover{border-color:#7FE7FF;color:#FFFFFF;box-shadow:0 0 18px rgba(127,231,255,.25)}
+
+/* ---------- Upplifunin: forsíða + skrefin ---------- */
+.xp{position:relative;height:510vh}
+.xp-anchor{position:absolute;left:0;top:79vh;width:1px;height:1px}
+.xp-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.xp-bg,.xp-bg i,.xp-bokeh,.xp-spot{position:absolute;inset:0;pointer-events:none}
+.xp-bg i{opacity:0;transition:opacity .9s}
+.xp-bg .b-h{background:radial-gradient(60% 55% at 50% 48%,rgba(255,47,138,.17),rgba(255,47,138,0))}
+.xp-bg .b-0{background:radial-gradient(60% 55% at 70% 55%,rgba(127,231,255,.11),rgba(127,231,255,0))}
+.xp-bg .b-1{background:radial-gradient(60% 55% at 70% 55%,rgba(255,95,162,.15),rgba(255,95,162,0))}
+.xp-bg .b-2{background:radial-gradient(60% 55% at 70% 50%,rgba(255,169,77,.10),rgba(255,169,77,0)),radial-gradient(45% 45% at 15% 85%,rgba(255,95,162,.08),rgba(255,95,162,0))}
+.xp-bg .b-3{background:radial-gradient(55% 60% at 70% 45%,rgba(255,47,138,.32),rgba(255,47,138,0)),radial-gradient(40% 40% at 20% 80%,rgba(127,231,255,.15),rgba(127,231,255,0))}
+.xp-sticky[data-step="-1"] .b-h,.xp-sticky[data-step="0"] .b-0,.xp-sticky[data-step="1"] .b-1,.xp-sticky[data-step="2"] .b-2,.xp-sticky[data-step="3"] .b-3{opacity:1}
+.xp-bokeh{transition:opacity .9s;will-change:transform}
+.xp-bokeh i{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);margin:calc(var(--s) / -2) 0 0 calc(var(--s) / -2);border-radius:50%;animation:bkDrift var(--t) ease-in-out infinite alternate}
+.xp-bokeh .g{background:radial-gradient(circle,var(--c),rgba(0,0,0,0) 68%)}
+.xp-bokeh .d{background:radial-gradient(circle,var(--c) 0 54%,rgba(0,0,0,0) 71%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
+@media (max-width:640px){.xp-bokeh .d{width:calc(var(--s) * .7);height:calc(var(--s) * .7)}}
+@keyframes bkDrift{to{transform:translate(var(--dx),var(--dy))}}
+.xp-sticky[data-step="0"] .xp-bokeh,.xp-sticky[data-step="1"] .xp-bokeh,.xp-sticky[data-step="2"] .xp-bokeh{opacity:.45}
+.xp-spot{background:radial-gradient(520px circle at var(--mx,50%) var(--my,42%),rgba(255,95,162,.13),rgba(255,95,162,0) 65%)}
+
+.hero{position:absolute;inset:0;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:96px 24px 92px;text-align:center;transform-origin:50% 45%;will-change:opacity,transform}
+.hero-kick{margin:0;font-size:14px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#7FE7FF}
+.hero-h{margin:0;font-family:'Tilt Neon',sans-serif;font-weight:400;font-size:clamp(38px,13.5vw,128px);line-height:1.02;color:#FFFFFF}
+.hero-l1,.hero-l2{display:block;white-space:nowrap}
+.hero-l1{transition:color .7s,text-shadow .7s}
+.hero-l1.is-cycling{color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 18px #39D2F5,0 0 40px #22C7F0}
+.hero-l1.is-swap{animation:hwSwap .42s linear both}
+@keyframes hwSwap{0%{opacity:1}18%{opacity:.06}32%{opacity:.8}44%{opacity:.06}100%{opacity:1}}
+.hero-l2{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
+.hero-p{margin:0;max-width:620px;font-size:clamp(17px,2vw,21px);line-height:1.6;color:#D9CCD5}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-ctas a{min-width:230px}
+
+.xp-cue{position:absolute;left:0;right:0;bottom:16px;z-index:4;width:max-content;max-width:calc(100% - 32px);margin:0 auto;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:none;color:#B9A9B7;font:500 15px 'Inter',sans-serif;white-space:nowrap;cursor:pointer;transition:color .3s}
+.xp-cue:hover{color:#FFFFFF}
+.xp-cue svg{animation:stCue 1.6s ease-in-out infinite}
+
+.st{position:absolute;inset:0;opacity:0;will-change:opacity,transform}
+.st-inner{position:relative;height:100%;max-width:1240px;margin:0 auto;padding:30px 24px 78px;box-sizing:border-box;display:grid;grid-template-rows:auto minmax(0,1fr);gap:20px}
+.st-scene .t-in{opacity:0}
+.st-scene.is-active .t-in{animation:stFadeIn .4s ease var(--at,0s) both}
+.st-scene.is-active .t-out{animation:stFadeOut .3s ease var(--at,0s) both}
+@keyframes stFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes stFadeOut{to{opacity:0}}
+.st-scene .ring{opacity:0;transform-origin:center}
+.st-scene.is-active .ring{animation:stRing 1.4s cubic-bezier(.2,.6,.3,1) var(--d,0s) 3 both}
+@keyframes stRing{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(2.1)}}
+.st-scene .wave rect{transform-origin:center;transform:scaleY(.3)}
+.st-scene.is-active .wave rect{animation:stWave .9s ease-in-out var(--d,0s) infinite alternate}
+@keyframes stWave{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+.st-scene .accept{transform-origin:center}
+.st-scene.is-active .accept{animation:stPress .5s ease 1.5s both}
+@keyframes stPress{0%,100%{transform:scale(1)}40%{transform:scale(.84)}}
+.st-scene.is-active .decline{animation:stDim .4s ease var(--at,0s) both}
+@keyframes stDim{to{opacity:.25}}
+.st-scene .prog{transform:scaleX(0);transform-origin:left center}
+.st-scene.is-active .prog{animation:stProg 2.6s cubic-bezier(.45,0,.2,1) .5s both}
+@keyframes stProg{to{transform:scaleX(1)}}
+.st-hurra{display:block;color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
+/* Skrollupplifun */
+.st-kicker{margin:0 0 16px;font-size:14px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#7FE7FF}
+.st-rail{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:12px}
+.st-line{flex:1;height:2px;background:#2A1B33;border-radius:2px;overflow:hidden;min-width:20px}
+.st-line i{display:block;height:100%;width:100%;background:#FF5FA2;box-shadow:0 0 8px #FF2F8A;transform-origin:left;transform:scaleX(0)}
+.st-dot{display:flex;align-items:center;gap:10px;min-height:44px;padding:0;border:0;background:none;color:#8E7D8C;font:500 15px 'Inter',sans-serif;cursor:pointer;transition:color .4s}
+.st-dot span{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1.5px solid #4A3550;font-family:'Tilt Neon',sans-serif;font-size:18px;transition:all .4s}
+.st-dot em{font-style:normal;white-space:nowrap}
+.st-dot.is-on{color:#FFFFFF}
+.st-dot.is-on span{border-color:#FF5FA2;color:#FFE3F0;box-shadow:0 0 14px rgba(255,47,138,.6),inset 0 0 8px rgba(255,47,138,.4);text-shadow:0 0 6px #FF5FA2}
+.st-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center;min-height:0}
+.st-texts{display:grid}
+.st-text{grid-area:1/1;display:flex;flex-direction:column;gap:16px;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .7s cubic-bezier(.2,.8,.3,1);pointer-events:none}
+.st-text.is-active{opacity:1;transform:none;pointer-events:auto}
+.st-num{font-family:'Tilt Neon',sans-serif;font-size:clamp(56px,8vw,96px);line-height:1;color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
+.st-text h2{margin:0;font-family:'Tilt Neon',sans-serif;font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:1.05;color:#FFFFFF}
+.st-text p{margin:0;max-width:460px;font-size:clamp(17px,1.6vw,19px);line-height:1.6;color:#D9CCD5}
+.st-stage{position:relative;display:grid;height:100%;max-height:560px;min-height:0}
+.st-scene{grid-area:1/1;width:100%;height:100%;opacity:0;transform:scale(.94);transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.3,1);overflow:visible}
+.st-scene.is-active{opacity:1;transform:none}
+.st-scene *{transform-box:fill-box}
+.st-scene .pop{opacity:0}
+.st-scene.is-active .pop{animation:stPop .55s cubic-bezier(.2,.8,.3,1.3) both}
+@keyframes stPop{from{opacity:0;transform:translateY(12px) scale(.92)}to{opacity:1;transform:none}}
+.st-scene .trail{stroke-dashoffset:0}
+.st-scene.is-active .trail{animation:stDash 1.2s linear infinite}
+@keyframes stDash{to{stroke-dashoffset:-24}}
+.st-scene .env{opacity:0;transform-origin:center}
+.st-scene.is-active .env{animation:stFly 3s cubic-bezier(.5,0,.4,1) 1.6s infinite}
+@keyframes stFly{0%{opacity:0;transform:translate(0,0) scale(.5)}12%{opacity:1;transform:translate(0,0) scale(1)}70%{opacity:1;transform:translate(150px,-215px) rotate(14deg) scale(.75)}85%,100%{opacity:0;transform:translate(165px,-235px) rotate(18deg) scale(.4)}}
+.st-scene.is-active .tap rect{transform-origin:center;animation:stTap 3s ease-in-out 1.6s infinite}
+@keyframes stTap{0%,100%{transform:scale(1)}6%{transform:scale(.93)}12%{transform:scale(1)}}
+.st-scene .bulb2 path{transition:fill .2s}
+.st-scene.is-active .bulb2 path{animation:stBulb 1.4s linear 1.3s both}
+@keyframes stBulb{0%{fill:#3B2234;filter:none}10%{fill:#FFE3F0;filter:drop-shadow(0 0 10px #FF5FA2)}16%{fill:#3B2234;filter:none}28%,100%{fill:#FFE3F0;filter:drop-shadow(0 0 12px #FF5FA2) drop-shadow(0 0 24px #FF2F8A)}}
+.st-scene .chk{stroke-dasharray:30;stroke-dashoffset:30}
+.st-scene.is-active .chk{animation:stChk .4s ease-out both}
+@keyframes stChk{to{stroke-dashoffset:0}}
+.st-scene .bulbs circle{opacity:.15}
+.st-scene.is-active .bulbs circle{animation:stOn .3s var(--d) both,stTwinkle 1.8s ease-in-out calc(var(--d) + .6s) infinite}
+@keyframes stOn{to{opacity:1;filter:drop-shadow(0 0 6px currentColor)}}
+@keyframes stTwinkle{0%,100%{opacity:1}50%{opacity:.45}}
+.st-scene .bulbs circle:nth-child(odd){color:#FF5FA2}.st-scene .bulbs circle:nth-child(even){color:#7FE7FF}
+.st-scene .beams{opacity:0;transform-origin:50% 0}
+.st-scene.is-active .beams{animation:stBeamIn .6s .9s both,stSwing 4s ease-in-out 1.5s infinite alternate}
+@keyframes stBeamIn{to{opacity:1}}
+@keyframes stSwing{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
+.st-scene .ball{transform-origin:50% 0}
+.st-scene.is-active .ball{animation:stSway 3s ease-in-out infinite alternate}
+@keyframes stSway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.st-scene.is-active .spark{animation:stTwinkle .9s ease-in-out infinite}
+.st-scene .sign{fill:#3B2234}
+.st-scene.is-active .sign{animation:stSign 1.3s linear 1.1s both}
+@keyframes stSign{0%{fill:#3B2234}8%{fill:#FFE3F0}12%{fill:#3B2234}22%{fill:#FFE3F0}26%{fill:#3B2234}40%,100%{fill:#FFE3F0}}
+.st-scene.is-active .dancer{animation:stBounce .7s ease-in-out var(--d) infinite alternate}
+@keyframes stBounce{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+@keyframes stCue{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media (max-width:900px){
+.st-kicker{margin-bottom:8px}
+.st-dot em{display:none}
+.st-dot.is-on em{display:inline}
+.st-body{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:16px;align-items:stretch}
+.st-text{gap:10px}
+.st-num{font-size:48px}
+.st-text h2{font-size:clamp(28px,7vw,38px)}
+.st-text p{font-size:16px}
+}
+@media (max-width:420px){.st-dot.is-on em{display:none}}
+@media (prefers-reduced-motion: reduce){
+.st-text,.st-scene{transition:none}
+.st-scene *,.st-cue svg{animation:none !important}
+.st-scene .pop,.st-scene .beams,.st-scene .t-in{opacity:1}.st-scene .t-out{opacity:0}.st-scene .prog,.st-scene .wave rect{transform:none}.st-scene .chk{stroke-dashoffset:0}.st-scene .bulbs circle{opacity:1}.st-scene .sign{fill:#FFE3F0}.st-scene .bulb2 path{fill:#FFE3F0}
+}
+@media (max-width:900px){.st-inner{padding:20px 20px 70px;gap:12px}}
+@media (max-width:640px){.hero{gap:22px;padding:84px 20px 80px}}
+@media (max-height:700px){.hero{gap:16px}.hero-p{font-size:16px}.btn-p,.btn-o{min-height:50px}}
+.cf{position:absolute;width:9px;height:14px;border-radius:2px;pointer-events:none;z-index:6;will-change:transform,opacity}
+
+/* ---------- Kveikjum á hugmyndinni þinni ---------- */
+.k{position:relative;overflow:hidden;padding:128px 24px 120px}
+.k-glow{position:absolute;left:50%;top:-80px;width:1200px;height:640px;margin-left:-600px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,47,138,.17),rgba(255,47,138,0));pointer-events:none}
+.k-in{position:relative;max-width:1240px;margin:0 auto}
+.k-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px;margin-bottom:56px}
+.k-h{margin:0;font-family:'Tilt Neon',sans-serif;font-weight:400;font-size:clamp(42px,6.4vw,88px);line-height:1.02;color:#FFFFFF}
+.k-h span{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
+.k-lead{margin:0;max-width:430px;font-size:19px;line-height:1.6;color:#D9CCD5;text-wrap:balance}
+.k-form{margin:0}
+.k-set{margin:0;padding:0;border:0;min-width:0;scroll-margin-top:110px}
+.k-step{float:left;width:100%;display:flex;align-items:center;gap:12px;margin:0 0 18px;padding:0;font-size:14px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#7FE7FF}
+.k-step-n{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1.5px solid #FF5FA2;font-family:'Tilt Neon',sans-serif;font-size:17px;letter-spacing:0;color:#FFE3F0;text-shadow:0 0 6px #FF5FA2;box-shadow:0 0 14px rgba(255,47,138,.5),inset 0 0 8px rgba(255,47,138,.35)}
+
+/* Tilefnisskiltin */
+.k-wall{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.k-wall.is-shake{animation:kShake .45s}
+@keyframes kShake{0%,100%{transform:none}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.sg{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:84px;padding:14px 18px;box-sizing:border-box;border-radius:18px;border:1px solid #2A1B33;background:linear-gradient(180deg,#150C1D,#0E0714);cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.3,1),border-color .3s,box-shadow .35s,background .35s}
+.sg::before{content:"";position:absolute;inset:9px;pointer-events:none;background:radial-gradient(circle,#4A3550 0 1.5px,rgba(0,0,0,0) 2.2px) left top/6px 6px no-repeat,radial-gradient(circle,#4A3550 0 1.5px,rgba(0,0,0,0) 2.2px) right top/6px 6px no-repeat,radial-gradient(circle,#4A3550 0 1.5px,rgba(0,0,0,0) 2.2px) left bottom/6px 6px no-repeat,radial-gradient(circle,#4A3550 0 1.5px,rgba(0,0,0,0) 2.2px) right bottom/6px 6px no-repeat}
+.sg input{position:absolute;inset:0;z-index:2;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;scroll-margin:110px 0 140px}
+.sg-neon,.sg-glow{display:flex;align-items:center;justify-content:center;gap:14px}
+.sg-neon{opacity:.13}
+.sg-glow{transition:opacity .35s}
+.sg-ic{flex:none;width:32px;height:32px;fill:none;stroke:var(--cl);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 2px var(--c)) drop-shadow(0 0 8px var(--c))}
+.sg-t{font-family:'Tilt Neon',sans-serif;font-size:clamp(21px,2vw,27px);line-height:1.05;color:var(--cl);text-shadow:0 0 5px var(--c),0 0 14px var(--c),0 0 30px var(--ch)}
+.k-wall.is-lit .sg-neon{animation:sgFlick 1.05s linear var(--d) both}
+@keyframes sgFlick{0%{opacity:.13}10%{opacity:1}14%{opacity:.13}24%{opacity:1}28%{opacity:.3}40%,100%{opacity:1}}
+.k-wall.is-lit .sg:nth-child(3) .sg-t{animation:hBuzz 9s linear 4s infinite}
+.k-wall.is-lit .sg:nth-child(6) .sg-t{animation:hBuzz 11s linear 7s infinite}
+.sg:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--c) 45%,#2A1B33);box-shadow:0 10px 26px rgba(0,0,0,.35),0 0 22px color-mix(in srgb,var(--c) 18%,transparent)}
+.sg:has(input:focus-visible){outline:2px solid var(--cl);outline-offset:3px}
+.sg.is-on{border-color:var(--c);background:linear-gradient(180deg,color-mix(in srgb,var(--c) 12%,#150C1D),#0E0714);box-shadow:0 0 0 1px var(--c),0 0 34px color-mix(in srgb,var(--c) 45%,transparent),inset 0 0 30px color-mix(in srgb,var(--c) 16%,transparent)}
+.sg.is-on .sg-t{text-shadow:0 0 6px var(--c),0 0 18px var(--c),0 0 42px var(--ch),0 0 70px var(--ch)}
+.sg.is-on .sg-ic{filter:drop-shadow(0 0 3px var(--c)) drop-shadow(0 0 13px var(--c))}
+.k-wall.has-pick .sg:not(.is-on) .sg-glow{opacity:.32}
+.k-wall.has-pick .sg:not(.is-on):hover .sg-glow{opacity:.8}
+.k-desc{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;font-size:17px;line-height:1.5;color:#B9A9B7}
+.k-desc:not(:empty){margin-top:20px}
+.k-desc-q{font-family:'Tilt Neon',sans-serif;font-size:clamp(22px,2.2vw,28px);line-height:1.2;color:#FFFFFF}
+.k-desc-q b{font-weight:400;color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF2F8A}
+.k-desc-d{color:#D9CCD5}
+.k-desc.is-new{animation:kDesc .5s cubic-bezier(.2,.8,.3,1) both}
+@keyframes kDesc{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.k-desc.is-err .k-desc-q{color:#FFB3B3}
+
+/* Skref 2: hausinn fyrir ofan miðann */
+.k-two{margin-top:72px}
+.k-two-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px;margin-bottom:28px}
+.k-two-head .k-step{float:none;margin:0 0 12px}
+.k-two-p{margin:0;font-size:19px;line-height:1.5;color:#D9CCD5}
+.c-direct{display:flex;flex-direction:column;gap:4px;font-size:15px;color:#B9A9B7}
+.c-direct a{font-size:19px;font-weight:500;color:#7FE7FF;text-decoration:none;overflow-wrap:anywhere}
+.c-direct a:hover{text-decoration:underline}
+
+/* Miðinn: fyrirspurnin sem boðsmiði */
+.tk{--tc:#FF5FA2;--tcl:#FFE3F0;--tch:#FF2F8A;position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,310px) minmax(0,1fr);border-radius:28px;border:1px solid #3A2742;background:linear-gradient(135deg,#1B1024 0%,#120A19 55%,#170C1E 100%);box-shadow:0 40px 90px -50px rgba(255,47,138,.45);transition:border-color .4s,box-shadow .4s}
+.tk:focus-within{border-color:#563A5E;box-shadow:0 40px 90px -40px rgba(255,47,138,.6)}
+.tk-stub{position:relative;display:flex;flex-direction:column;gap:20px;padding:34px 30px 30px;border-right:2px dashed #3A2742;background:radial-gradient(120% 70% at 0% 0%,color-mix(in srgb,var(--tc) 14%,transparent),transparent 70%)}
+.tk-stub::before,.tk-stub::after{content:"";position:absolute;right:-17px;width:32px;height:32px;border-radius:50%;background:#0B0610;border:1px solid #3A2742;box-sizing:border-box}
+.tk-stub::before{top:-17px}
+.tk-stub::after{bottom:-17px}
+.tk-kick{margin:0;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#7FE7FF}
+.tk-what{margin:-6px 0 0;font-family:'Tilt Neon',sans-serif;font-size:clamp(34px,3.3vw,44px);line-height:1.05;color:var(--tcl);text-shadow:0 0 6px var(--tc),0 0 18px var(--tc),0 0 40px var(--tch);overflow-wrap:anywhere}
+.tk-what.is-empty{color:#4A3550;text-shadow:none}
+.tk-what.is-new{animation:sgFlick .9s linear both}
+.tk-meta{margin:0;display:grid;gap:12px}
+.tk-meta div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid #2A1B33}
+.tk-meta dt{font-size:13px;color:#8E7D8C}
+.tk-meta dd{margin:0;font-size:15px;font-weight:500;color:#FFFFFF;text-align:right;overflow-wrap:anywhere}
+.tk-brand{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.tk-logo{font-family:'Tilt Neon',sans-serif;font-size:22px;line-height:1;color:#FFE3F0;text-shadow:0 0 5px #FF5FA2,0 0 12px #FF2F8A;white-space:nowrap}
+.tk-code{width:78px;height:30px;opacity:.75;background:repeating-linear-gradient(90deg,#4A3550 0 2px,rgba(0,0,0,0) 2px 4px,#4A3550 4px 5px,rgba(0,0,0,0) 5px 8px,#4A3550 8px 11px,rgba(0,0,0,0) 11px 13px)}
+.tk-stamp{position:absolute;right:26px;top:44%;padding:6px 14px;border:2.5px solid #7FE7FF;border-radius:10px;font-family:'Tilt Neon',sans-serif;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:#E6FBFF;text-shadow:0 0 8px #39D2F5;box-shadow:0 0 18px rgba(127,231,255,.45),inset 0 0 12px rgba(127,231,255,.3);opacity:0;transform:rotate(-14deg) scale(1.8);pointer-events:none}
+.tk.is-sent .tk-stamp{animation:tkStamp .5s cubic-bezier(.2,.8,.3,1.4) .25s both}
+@keyframes tkStamp{from{opacity:0;transform:rotate(-14deg) scale(1.8)}to{opacity:1;transform:rotate(-14deg) scale(1)}}
+.tk-main{padding:34px 40px 36px;min-width:0}
+.tk-main [hidden]{display:none !important}
+.tk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 30px}
+.tk-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.tk-f.wide{grid-column:1/-1}
+.tk-f label{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#B9A9B7}
+.tk-f .opt{font-weight:500;letter-spacing:.02em;text-transform:none;color:#8E7D8C}
+.tk-f input,.tk-f textarea{box-sizing:border-box;width:100%;margin:0;padding:10px 0 12px;border:0;border-bottom:1.5px solid #4A3550;border-radius:0;background:transparent;color:#FFFFFF;font:400 18px 'Inter',sans-serif;color-scheme:dark;transition:border-color .25s,box-shadow .25s}
+.tk-f textarea{resize:vertical;min-height:92px;line-height:1.55}
+.tk-f input::placeholder,.tk-f textarea::placeholder{color:#6E5D6C}
+.tk-f input:focus,.tk-f textarea:focus{outline:none;border-bottom-color:#FF5FA2;box-shadow:0 1px 0 #FF5FA2,0 12px 18px -14px rgba(255,95,162,.9)}
+.tk-f [aria-invalid="true"]{border-bottom-color:#FF8A8A}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.f-error{margin:18px 0 0;font-size:15px;color:#FFB3B3}
+.f-error:empty{margin:0}
+.tk-actions{margin-top:30px}
+.tk-submit{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 36px;border:0;border-radius:999px;background:#FF5FA2;color:#12091A;font:600 17px 'Inter',sans-serif;cursor:pointer;box-shadow:0 0 28px rgba(255,47,138,.5);transition:background .2s,box-shadow .2s}
+.tk-submit:hover{background:#FF7BB3;box-shadow:0 0 40px rgba(255,47,138,.7)}
+.tk-submit:focus-visible{outline:2px solid #FFE3F0;outline-offset:3px}
+.tk-submit[disabled]{cursor:progress;opacity:.8}
+.tk-spin{display:none;width:18px;height:18px;border-radius:50%;border:2px solid rgba(18,9,26,.3);border-top-color:#12091A;animation:tkSpin .8s linear infinite}
+.tk-submit.is-busy .tk-spin{display:inline-block}
+.tk-submit.is-busy .tk-ic{display:none}
+@keyframes tkSpin{to{transform:rotate(360deg)}}
+.tk-done,.tk-fail{display:flex;flex-direction:column;justify-content:center;gap:12px;min-height:100%;font-size:17px;line-height:1.6;color:#D9CCD5}
+.tk-done:focus,.tk-fail:focus{outline:none}
+.tk-done p,.tk-fail p{margin:0;max-width:520px}
+.tk-done-t{font-family:'Tilt Neon',sans-serif;font-size:clamp(44px,5vw,60px);line-height:1;color:#FFE3F0 !important;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
+.tk-fail-t{font-family:'Tilt Neon',sans-serif;font-size:clamp(28px,3vw,36px);line-height:1.1;color:#FFFFFF !important}
+.tk-fail a:not(.btn-p){color:#7FE7FF}
+.tk-fail-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.tk-fail-actions .btn-o{background:transparent;cursor:pointer;font-family:'Inter',sans-serif}
+
+@media (max-width:900px){
+.k{padding:104px 20px 96px}
+.k-head{margin-bottom:44px}
+.k-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sg{min-height:64px;padding:10px 12px}
+.sg-neon,.sg-glow{gap:10px}
+.sg-ic{width:24px;height:24px}
+.sg-t{font-size:clamp(17px,4.8vw,21px)}
+.k-desc{font-size:16px}
+.k-two{margin-top:56px}
+.k-two-p{font-size:17px}
+}
+@media (max-width:760px){
+.tk{grid-template-columns:minmax(0,1fr)}
+.tk-stub{gap:16px;padding:26px 22px 24px;border-right:0;border-bottom:2px dashed #3A2742}
+.tk-stub::before,.tk-stub::after{top:auto;bottom:-17px}
+.tk-stub::before{left:-17px;right:auto}
+.tk-stub::after{right:-17px}
+.tk-meta{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tk-meta div{flex-direction:column;align-items:flex-start;gap:2px;padding:0;border:0}
+.tk-meta dd{text-align:left}
+.tk-stamp{top:22px;right:18px}
+.tk-main{padding:26px 22px 28px}
+.tk-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+.tk-submit{width:100%}
+}
+
+/* ---------- Fótur ---------- */
+.ft{border-top:1px solid #2A1B33}
+.ft-in{max-width:1240px;margin:0 auto;padding:32px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:15px;color:#D9CCD5}
+.ft-logo{display:flex;align-items:baseline;gap:10px}
+.ft-logo b{font-weight:400;font-family:'Tilt Neon',sans-serif;font-size:28px;color:#FFE3F0;text-shadow:0 0 5px #FF5FA2,0 0 14px #FF2F8A}
+.ft-logo i{font-style:normal;font-family:'Tilt Neon',sans-serif;font-size:13px;letter-spacing:.4em;color:#E6FBFF}
+.ft-replay{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #3A2742;background:transparent;color:#D9CCD5;font:500 14px 'Inter',sans-serif;cursor:pointer}
+.ft-replay:hover{border-color:#FF5FA2;color:#FFFFFF}
+
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto}
+.h-intro{display:none}
+.h-l,.h-sub{color:#FFE3F0}
+.h-l,.h-sub,.h-glow,.h-rise,.h-buzz{animation:none !important}
+.xp-bokeh i,.xp-cue svg,.menu-nav a{animation:none !important}
+.sg-neon{opacity:1;animation:none !important}
+.sg-t{animation:none !important}
+.k-wall.is-shake,.k-desc.is-new,.tk-what.is-new{animation:none}
+.tk.is-sent .tk-stamp{animation:none;opacity:1;transform:rotate(-14deg)}
+}
+</style>
+</head>
+<body>
+<script>try{if(sessionStorage.getItem('hurra-intro'))document.documentElement.classList.add('no-intro')}catch(e){}</script>
+
+<!-- Kynning: skiltið kviknar og rennur upp -->
+<div class="h-intro" id="intro">
+<div class="h-glow h-glowbg" aria-hidden="true"></div>
+<div class="h-word" aria-label="húrra"><span class="h-l" style="animation-delay:.3s">h</span><span class="h-l" style="animation-delay:.5s">ú</span><span class="h-l" style="animation-delay:.65s">r</span><span class="h-l" style="animation-delay:.85s">r</span><span class="h-l" style="animation-delay:1.05s">a</span></div>
+<div class="h-sub">events</div>
+<button type="button" class="h-skip" id="skip">Sleppa</button>
+</div>
+
+<!-- Haus -->
+<header class="hd" id="hd">
+<div class="hd-in">
+<a href="#efst" class="logo">húrra events</a>
+<nav class="hd-nav" aria-label="Aðalvalmynd">
+<a href="#thjonusta">Þjónusta</a>
+<a href="#ferlid">Svona virkar þetta</a>
+<a href="um.html">Um Húrra Events</a>
+<a href="#hafa-samband" class="hd-cta">Senda fyrirspurn</a>
+</nav>
+<button type="button" class="hd-burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Opna valmynd">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+</button>
+</div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Valmynd" hidden>
+<div class="menu-top">
+<a href="#efst" class="logo" data-close>húrra events</a>
+<button type="button" class="hd-burger" id="menu-close" style="display:inline-flex" aria-label="Loka valmynd">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+</div>
+<nav class="menu-nav" aria-label="Valmynd">
+<a href="#ferlid" style="--i:0" data-close>Svona virkar þetta</a>
+<a href="#thjonusta" style="--i:1" data-close>Þjónusta</a>
+<a href="um.html" style="--i:2">Um Húrra Events</a>
+</nav>
+<a href="#hafa-samband" class="btn-p" data-close>Senda fyrirspurn</a>
+<p class="menu-mail">hurraevents@hurraevents.is</p>
+</div>
+
+<main>
+<!-- Forsíða + svona virkar þetta: ein skrollupplifun -->
+<section id="efst" class="xp" aria-label="Forsíða">
+<span id="ferlid" class="xp-anchor" aria-hidden="true"></span>
+<div class="xp-sticky" id="xp" data-step="-1">
+<div class="xp-bg" aria-hidden="true"><i class="b-h"></i><i class="b-0"></i><i class="b-1"></i><i class="b-2"></i><i class="b-3"></i></div>
+<div class="xp-bokeh" id="bokeh" aria-hidden="true">
+<i class="g" style="--x:12%;--y:22%;--s:300px;--c:rgba(255,95,162,.10);--t:18s;--dx:60px;--dy:40px"></i>
+<i class="g" style="--x:84%;--y:76%;--s:340px;--c:rgba(255,47,138,.10);--t:21s;--dx:-70px;--dy:-30px"></i>
+<i class="g" style="--x:88%;--y:20%;--s:240px;--c:rgba(127,231,255,.07);--t:19s;--dx:-50px;--dy:60px"></i>
+<i class="d" style="--x:8%;--y:18%;--s:110px;--c:rgba(255,95,162,.17);--t:16s;--dx:40px;--dy:30px"></i>
+<i class="d" style="--x:19%;--y:74%;--s:72px;--c:rgba(127,231,255,.15);--t:14s;--dx:30px;--dy:-40px"></i>
+<i class="d" style="--x:29%;--y:11%;--s:44px;--c:rgba(255,227,240,.15);--t:12s;--dx:-20px;--dy:30px"></i>
+<i class="d" style="--x:90%;--y:27%;--s:128px;--c:rgba(127,231,255,.12);--t:20s;--dx:-40px;--dy:40px"></i>
+<i class="d" style="--x:77%;--y:84%;--s:104px;--c:rgba(255,95,162,.16);--t:17s;--dx:-30px;--dy:-40px"></i>
+<i class="d" style="--x:94%;--y:60%;--s:56px;--c:rgba(255,95,162,.2);--t:13s;--dx:-20px;--dy:30px"></i>
+<i class="d" style="--x:64%;--y:9%;--s:52px;--c:rgba(127,231,255,.13);--t:15s;--dx:30px;--dy:30px"></i>
+<i class="d" style="--x:5%;--y:50%;--s:38px;--c:rgba(127,231,255,.18);--t:11s;--dx:20px;--dy:-30px"></i>
+<i class="d" style="--x:39%;--y:90%;--s:82px;--c:rgba(255,95,162,.11);--t:18s;--dx:40px;--dy:-20px"></i>
+<i class="d" style="--x:71%;--y:38%;--s:30px;--c:rgba(255,227,240,.12);--t:10s;--dx:-20px;--dy:-20px"></i>
+<i class="d" style="--x:22%;--y:42%;--s:28px;--c:rgba(255,95,162,.16);--t:12s;--dx:20px;--dy:20px"></i>
+</div>
+<div class="xp-spot" id="spot" aria-hidden="true"></div>
+
+<div class="hero" id="hero">
+<p class="hero-kick h-rise" style="--i:0">Viðburðafyrirtæki fyrir einstaklinga og fyrirtæki</p>
+<h1 class="hero-h h-rise" style="--i:1"><span class="sr">Þitt tilefni, þitt húrra.</span><span class="hero-l1" id="hero-l1" aria-hidden="true">Þitt tilefni,</span><span class="hero-l2 h-buzz" aria-hidden="true">þitt húrra.</span></h1>
+<p class="hero-p h-rise" style="--i:2">Húrra Events skipuleggur og setur upp viðburði frá fyrstu hugmynd til síðasta lags. Þú nýtur dagsins, við sjáum um rest.</p>
+<div class="hero-ctas h-rise" style="--i:3">
+<a href="#hafa-samband" class="btn-p">Senda fyrirspurn</a>
+<a href="#ferlid" class="btn-o">Svona virkar þetta</a>
+</div>
+</div>
+
+<div class="st" id="st">
+<div class="st-inner">
+<div class="st-top">
+<p class="st-kicker">Svona virkar þetta</p>
+<ol class="st-rail" aria-label="Skref">
+<li><button type="button" data-go="0" class="st-dot"><span>1</span><em>Þú hefur samband</em></button></li>
+<li class="st-line" aria-hidden="true"><i class="st-fill"></i></li>
+<li><button type="button" data-go="1" class="st-dot"><span>2</span><em>Við heyrum í þér</em></button></li>
+<li class="st-line" aria-hidden="true"><i class="st-fill"></i></li>
+<li><button type="button" data-go="2" class="st-dot"><span>3</span><em>Mótum og skipuleggjum</em></button></li>
+<li class="st-line" aria-hidden="true"><i class="st-fill"></i></li>
+<li><button type="button" data-go="3" class="st-dot"><span>4</span><em>Viðburðardagurinn</em></button></li>
+</ol>
+</div>
+<div class="st-body">
+<div class="st-texts">
+<div class="st-text" data-i="0">
+<span class="st-num">01</span>
+<h2>Þú hefur samband</h2>
+<p>Sendu okkur línu um tilefnið, dagsetningu og fjölda gesta. Hugmyndin þarf ekki að vera fullmótuð, neistinn dugar.</p>
+</div>
+<div class="st-text" data-i="1">
+<span class="st-num">02</span>
+<h2>Við heyrum í þér</h2>
+<p>Við höfum samband fljótlega, hlustum á hugmyndina þína og fáum á hreint hvað skiptir þig mestu máli.</p>
+</div>
+<div class="st-text" data-i="2">
+<span class="st-num">03</span>
+<h2>Við mótum og skipuleggjum viðburðinn</h2>
+<p>Þema, dagskrá, veitingar og staðsetning. Við skipuleggjum allt frá A til Ö og fínstillum með þér þangað til allt smellur.</p>
+</div>
+<div class="st-text" data-i="3">
+<span class="st-num">04</span>
+<h2>Viðburðardagurinn. <span class="st-hurra">Húrra, njóttu!</span></h2>
+<p>Viðburðurinn þinn hefst og þú nýtur hans. Húrra!</p>
+</div>
+</div>
+<div class="st-stage" id="st-stage">
+<!-- Senna 1: fyrirspurn send -->
+<svg class="st-scene" data-i="0" viewBox="0 0 480 420" role="img" aria-label="Sími þar sem fyrirspurn er fyllt út og send af stað">
+<defs><filter id="g1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path class="trail" d="M262 318 C 330 290, 360 200, 420 90" fill="none" stroke="#7FE7FF" stroke-width="2" stroke-dasharray="4 8" filter="url(#g1)" opacity=".8"/>
+<rect x="140" y="40" width="190" height="340" rx="30" fill="#140B1C" stroke="#4A3550" stroke-width="2"/>
+<rect x="205" y="54" width="60" height="8" rx="4" fill="#2A1B33"/>
+<text x="162" y="100" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="15" font-weight="600">Ný fyrirspurn</text>
+<g class="pop" style="animation-delay:.2s"><rect x="160" y="118" width="150" height="40" rx="10" fill="#0B0610" stroke="#4A3550"/><text x="172" y="143" fill="#D9CCD5" font-family="Inter,sans-serif" font-size="13">Tilefni: <tspan fill="#FFE3F0">Árshátíð</tspan></text></g>
+<g class="pop" style="animation-delay:.55s"><rect x="160" y="168" width="150" height="40" rx="10" fill="#0B0610" stroke="#4A3550"/><text x="172" y="193" fill="#D9CCD5" font-family="Inter,sans-serif" font-size="13">Dags: <tspan fill="#FFE3F0">14. mars</tspan></text></g>
+<g class="pop" style="animation-delay:.9s"><rect x="160" y="218" width="150" height="40" rx="10" fill="#0B0610" stroke="#4A3550"/><text x="172" y="243" fill="#D9CCD5" font-family="Inter,sans-serif" font-size="13">Gestir: <tspan fill="#FFE3F0">120</tspan></text></g>
+<g class="pop tap" style="animation-delay:1.25s"><rect x="160" y="296" width="150" height="44" rx="22" fill="#FF5FA2" filter="url(#g1)"/><text x="235" y="324" text-anchor="middle" fill="#12091A" font-family="Inter,sans-serif" font-size="15" font-weight="600">Senda</text></g>
+<g class="env">
+<rect x="236" y="300" width="52" height="36" rx="5" fill="#FFE3F0" filter="url(#g1)"/>
+<path d="M238 303 L262 322 L286 303" fill="none" stroke="#C8125F" stroke-width="2.2" stroke-linejoin="round"/>
+</g>
+<g class="pop" style="animation-delay:1.9s"><circle cx="418" cy="86" r="18" fill="none" stroke="#7FE7FF" stroke-width="2" filter="url(#g1)"/><path d="M410 86 l6 6 l11 -12" fill="none" stroke="#7FE7FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
+
+<!-- Senna 2: við heyrum í þér -->
+<svg class="st-scene" data-i="1" viewBox="0 0 480 420" role="img" aria-label="Húrra Events hringir og spjallar um hugmyndina">
+<defs><filter id="g2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="24" y="36" width="214" height="348" rx="30" fill="#140B1C" stroke="#3A2742" stroke-width="1.5"/>
+<circle class="ring" cx="131" cy="128" r="40" fill="none" stroke="#FF5FA2" stroke-width="1.5" style="--d:0s"/>
+<circle class="ring" cx="131" cy="128" r="40" fill="none" stroke="#FF5FA2" stroke-width="1.5" style="--d:.45s"/>
+<circle class="ring" cx="131" cy="128" r="40" fill="none" stroke="#7FE7FF" stroke-width="1.5" style="--d:.9s"/>
+<circle cx="131" cy="128" r="40" fill="#0B0610" stroke="#FF5FA2" stroke-width="2" filter="url(#g2)"/>
+<text x="131" y="139" text-anchor="middle" font-family="'Tilt Neon',sans-serif" font-size="30" fill="#FFE3F0" filter="url(#g2)">hú</text>
+<text x="131" y="200" text-anchor="middle" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="17" font-weight="600">Húrra Events</text>
+<text class="t-out" style="--at:1.9s" x="131" y="224" text-anchor="middle" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">Hringir…</text>
+<text class="t-in" style="--at:2s" x="131" y="224" text-anchor="middle" fill="#7FE7FF" font-family="Inter,sans-serif" font-size="13">Í símtali · 00:42</text>
+<g class="t-in wave" style="--at:2s" fill="#7FE7FF">
+<rect x="84" y="257" width="4" height="10" rx="2" style="--d:0s"/>
+<rect x="93" y="251" width="4" height="22" rx="2" style="--d:0.2s"/>
+<rect x="102" y="245" width="4" height="34" rx="2" style="--d:0.4s"/>
+<rect x="111" y="253" width="4" height="18" rx="2" style="--d:0.1s"/>
+<rect x="120" y="242" width="4" height="40" rx="2" style="--d:0.3s"/>
+<rect x="129" y="249" width="4" height="26" rx="2" style="--d:0.5s"/>
+<rect x="138" y="240" width="4" height="44" rx="2" style="--d:0.15s"/>
+<rect x="147" y="252" width="4" height="20" rx="2" style="--d:0.35s"/>
+<rect x="156" y="247" width="4" height="30" rx="2" style="--d:0.05s"/>
+<rect x="165" y="254" width="4" height="16" rx="2" style="--d:0.25s"/>
+<rect x="174" y="258" width="4" height="8" rx="2" style="--d:0.45s"/>
+</g>
+<g class="decline" style="--at:1.9s"><circle cx="91" cy="330" r="22" fill="#2A1B33"/><g transform="translate(79 318) rotate(135 12 12)" fill="none" stroke="#FF8A8A" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5.5a2 2 0 0 1 2-2z"/></g></g>
+<g class="accept"><circle cx="171" cy="330" r="22" fill="#7FE7FF" filter="url(#g2)"/><g transform="translate(159 318)" fill="none" stroke="#0B0610" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5.5a2 2 0 0 1 2-2z"/></g></g>
+<g class="pop" style="animation-delay:2.3s"><rect x="256" y="70" width="212" height="62" rx="18" fill="#FF5FA2"/><text fill="#12091A" font-family="Inter,sans-serif" font-size="14" font-weight="600"><tspan x="274" y="96">Hæ! Segðu okkur frá</tspan><tspan x="274" dy="20">hugmyndinni 🎉</tspan></text></g>
+<g class="pop" style="animation-delay:3s"><rect x="270" y="150" width="198" height="62" rx="18" fill="#140B1C" stroke="#7FE7FF" stroke-width="1.5"/><text fill="#E6FBFF" font-family="Inter,sans-serif" font-size="14"><tspan x="288" y="176">Okkur dreymir um</tspan><tspan x="288" dy="20">diskókvöld 🪩</tspan></text></g>
+<g class="pop" style="animation-delay:3.7s"><rect x="256" y="230" width="212" height="62" rx="18" fill="#FF5FA2"/><text fill="#12091A" font-family="Inter,sans-serif" font-size="14" font-weight="600"><tspan x="274" y="256">Æðislegt! Þá förum</tspan><tspan x="274" dy="20">við af stað ✨</tspan></text></g>
+</svg>
+
+<!-- Senna 3: við mótum og skipuleggjum -->
+<svg class="st-scene" data-i="2" viewBox="0 0 480 420" role="img" aria-label="Skipulag viðburðarins: þema, dagskrá, veitingar og staðsetning hakað við">
+<defs><filter id="g3b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g class="pop" style="animation-delay:.1s">
+<rect x="30" y="28" width="420" height="134" rx="22" fill="#140B1C" stroke="#3A2742" stroke-width="1.5"/>
+<rect x="52" y="50" width="68" height="76" rx="14" fill="#0B0610" stroke="#FF5FA2" stroke-width="1.5" filter="url(#g3b)"/>
+<text x="86" y="72" text-anchor="middle" fill="#FF5FA2" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">MARS</text>
+<text x="86" y="111" text-anchor="middle" fill="#FFE3F0" font-family="'Tilt Neon',sans-serif" font-size="34">14</text>
+<text x="140" y="78" fill="#FFFFFF" font-family="'Tilt Neon',sans-serif" font-size="26">Árshátíðin</text>
+<text x="140" y="102" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">120 gestir · Diskóþema</text>
+<rect x="140" y="118" width="286" height="8" rx="4" fill="#2A1B33"/>
+<rect class="prog" x="140" y="118" width="286" height="8" rx="4" fill="#FF5FA2" filter="url(#g3b)"/>
+<text x="140" y="146" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="12">Skipulag</text>
+<text class="t-out" style="--at:3.1s" x="426" y="146" text-anchor="end" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="12">Í vinnslu…</text>
+<text class="t-in" style="--at:3.2s" x="426" y="146" text-anchor="end" fill="#7FE7FF" font-family="Inter,sans-serif" font-size="12" font-weight="600">Allt klárt ✓</text>
+</g>
+<g class="bulb2" transform="translate(31 -115)"><path d="M420 168 a20 20 0 1 0 -26 0 v10 h26z" fill="#3B2234" stroke="#FFE3F0" stroke-width="1.5"/><rect x="396" y="182" width="22" height="6" rx="2" fill="#4A3550"/></g>
+<g class="pop" style="animation-delay:0.6s"><rect x="30" y="184" width="204" height="96" rx="16" fill="#140B1C" stroke="#3A2742"/><text x="50" y="224" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="16" font-weight="600">Þema</text><text x="50" y="248" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">Diskó og glimmer</text><path class="chk" d="M194 218 l6 6 l12 -13" fill="none" stroke="#7FE7FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.2s"/></g>
+<g class="pop" style="animation-delay:0.8s"><rect x="246" y="184" width="204" height="96" rx="16" fill="#140B1C" stroke="#3A2742"/><text x="266" y="224" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="16" font-weight="600">Dagskrá</text><text x="266" y="248" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">Fordrykkur til DJ</text><path class="chk" d="M410 218 l6 6 l12 -13" fill="none" stroke="#7FE7FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.8s"/></g>
+<g class="pop" style="animation-delay:1.0s"><rect x="30" y="296" width="204" height="96" rx="16" fill="#140B1C" stroke="#3A2742"/><text x="50" y="336" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="16" font-weight="600">Veitingar</text><text x="50" y="360" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">Smáréttir og kokteilar</text><path class="chk" d="M194 330 l6 6 l12 -13" fill="none" stroke="#7FE7FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:2.4s"/></g>
+<g class="pop" style="animation-delay:1.2s"><rect x="246" y="296" width="204" height="96" rx="16" fill="#140B1C" stroke="#3A2742"/><text x="266" y="336" fill="#FFFFFF" font-family="Inter,sans-serif" font-size="16" font-weight="600">Staðsetning</text><text x="266" y="360" fill="#B9A9B7" font-family="Inter,sans-serif" font-size="13">Salur fyrir 120</text><path class="chk" d="M410 330 l6 6 l12 -13" fill="none" stroke="#7FE7FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:3.0s"/></g>
+</svg>
+
+<!-- Senna 4: viðburðardagurinn -->
+<svg class="st-scene" data-i="3" viewBox="0 0 480 420" role="img" aria-label="Veisla: ljósaseríur kvikna, diskókúla snýst og gestir dansa undir neonskilti sem segir húrra">
+<defs>
+<filter id="g4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="ball" cx="40%" cy="35%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#B9A9B7"/><stop offset="1" stop-color="#4A3550"/></radialGradient>
+</defs>
+<g class="beams"><polygon points="240,120 60,420 140,420" fill="#FF5FA2" opacity=".13"/><polygon points="240,120 330,420 410,420" fill="#7FE7FF" opacity=".13"/><polygon points="240,120 200,420 260,420" fill="#FFE3F0" opacity=".08"/></g>
+<path d="M10 40 Q 120 95 240 60 T 470 40" fill="none" stroke="#4A3550" stroke-width="1.5"/>
+<g class="bulbs">
+<circle cx="40" cy="55" r="6" style="--d:.1s" fill="#FF5FA2"/><circle cx="85" cy="70" r="6" style="--d:.2s" fill="#7FE7FF"/><circle cx="130" cy="77" r="6" style="--d:.3s" fill="#FFE3F0"/><circle cx="175" cy="74" r="6" style="--d:.4s" fill="#FF5FA2"/><circle cx="305" cy="47" r="6" style="--d:.6s" fill="#7FE7FF"/><circle cx="350" cy="40" r="6" style="--d:.7s" fill="#FFE3F0"/><circle cx="395" cy="38" r="6" style="--d:.8s" fill="#FF5FA2"/><circle cx="440" cy="40" r="6" style="--d:.9s" fill="#7FE7FF"/>
+</g>
+<line x1="240" y1="60" x2="240" y2="92" stroke="#4A3550" stroke-width="1.5"/>
+<g class="ball"><circle cx="240" cy="120" r="28" fill="url(#ball)"/><path d="M212 120h56M216 106h48M216 134h48M240 92v56M226 95c-6 16-6 34 0 50M254 95c6 16 6 34 0 50" stroke="#2A1B33" stroke-width="1" fill="none" opacity=".6"/><circle class="spark" cx="230" cy="108" r="3" fill="#FFFFFF" filter="url(#g4)"/></g>
+<text class="sign" x="240" y="232" text-anchor="middle" font-family="'Tilt Neon',sans-serif" font-size="72" filter="url(#g4)">húrra!</text>
+<g class="crowd" fill="#1E1228" stroke="#3A2742" stroke-width="1.5">
+<g class="dancer" style="--d:0s"><circle cx="70" cy="330" r="16"/><path d="M48 420 v-50 a22 22 0 0 1 44 0 v50z"/><path d="M52 360 l-18 -40 M88 360 l18 -40" stroke-width="7" stroke-linecap="round" stroke="#2A1B33"/></g>
+<g class="dancer" style="--d:.25s"><circle cx="150" cy="345" r="15"/><path d="M130 420 v-44 a20 20 0 0 1 40 0 v44z"/><path d="M134 372 l-14 -36" stroke-width="7" stroke-linecap="round" stroke="#2A1B33"/></g>
+<g class="dancer" style="--d:.5s"><circle cx="240" cy="325" r="17"/><path d="M216 420 v-52 a24 24 0 0 1 48 0 v52z"/><path d="M220 356 l-16 -44 M260 356 l16 -44" stroke-width="7" stroke-linecap="round" stroke="#2A1B33"/></g>
+<g class="dancer" style="--d:.15s"><circle cx="330" cy="342" r="15"/><path d="M310 420 v-44 a20 20 0 0 1 40 0 v44z"/><path d="M346 370 l14 -36" stroke-width="7" stroke-linecap="round" stroke="#2A1B33"/></g>
+<g class="dancer" style="--d:.4s"><circle cx="410" cy="332" r="16"/><path d="M388 420 v-50 a22 22 0 0 1 44 0 v50z"/><path d="M392 360 l-18 -40 M428 360 l18 -40" stroke-width="7" stroke-linecap="round" stroke="#2A1B33"/></g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+
+<button type="button" class="xp-cue h-rise" id="xp-cue" style="--i:5"><span id="xp-cue-t">Skrollaðu og sjáðu hvernig</span> <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+</div>
+</section>
+
+<!-- Kveikjum á hugmyndinni þinni: tilefnisskiltin + miðinn -->
+<section id="hafa-samband" class="k">
+<div class="k-glow" aria-hidden="true"></div>
+<div class="k-in">
+<div class="k-head">
+<h2 class="k-h">Kveikjum á <br><span>hugmyndinni þinni.</span></h2>
+<p class="k-lead">Kveikjum á þínu tilefni, segðu okkur frá því og við höfum samband eins fljótt og hægt er!</p>
+</div>
+
+<form id="fyrirspurn" class="k-form" novalidate>
+<fieldset class="k-set" id="thjonusta">
+<legend class="k-step"><span class="k-step-n">1</span>Veldu þitt tilefni</legend>
+<div class="k-wall" id="k-wall">
+
+<label class="sg" style="--c:#FF5FA2;--cl:#FFE3F0;--ch:#FF2F8A;--d:0s" data-q="Veisla?" data-d="Afmæli, fermingar, útskriftir og öll önnur tilefni til að skála.">
+<input type="radio" name="tilefni" value="Veisla">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a6 6 0 0 0-6 6c0 4.2 3 7.5 6 7.5s6-3.3 6-7.5a6 6 0 0 0-6-6z"/><path d="M12 16l-1.2 2h2.4z"/><path d="M12 18c0 2-2 2-2 3.5"/></svg>
+<span class="sg-t">Veisla</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#39D2F5;--cl:#E6FBFF;--ch:#22C7F0;--d:.35s" data-q="Árshátíð?" data-d="Kvöld sem starfsfólkið talar um fram að næstu árshátíð.">
+<input type="radio" name="tilefni" value="Árshátíð">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4h15L12 12.5z"/><path d="M12 12.5V20"/><path d="M8 20.5h8"/><path d="M15 4l3-2.5"/><circle cx="10.5" cy="6.6" r="1.1"/></svg>
+<span class="sg-t">Árshátíð</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#FFA94D;--cl:#FFF3E3;--ch:#FF8A1F;--d:.15s" data-q="Brúðkaup?" data-d="Dagurinn ykkar, skipulagður af alúð svo þið getið notið hans saman.">
+<input type="radio" name="tilefni" value="Brúðkaup">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="14.5" r="5"/><circle cx="15" cy="14.5" r="5"/><path d="M10 6l2-2.5L14 6"/></svg>
+<span class="sg-t">Brúðkaup</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#FF5FA2;--cl:#FFE3F0;--ch:#FF2F8A;--d:.5s" data-q="Golfmót?" data-d="Skráning, skipulag, verðlaun og veislan á eftir, allt á einum stað.">
+<input type="radio" name="tilefni" value="Golfmót">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20V3"/><path d="M7 4l10 3.5L7 11"/><path d="M3 20.5h9"/><circle cx="17" cy="18.5" r="2"/></svg>
+<span class="sg-t">Golfmót</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#39D2F5;--cl:#E6FBFF;--ch:#22C7F0;--d:.25s" data-q="Ráðstefna?" data-d="Fagleg umgjörð, skýr dagskrá og tækni sem virkar þegar á reynir.">
+<input type="radio" name="tilefni" value="Ráðstefna">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3.5"/></svg>
+<span class="sg-t">Ráðstefna</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#FFA94D;--cl:#FFF3E3;--ch:#FF8A1F;--d:.6s" data-q="Námskeið?" data-d="Rými, veitingar og skipulag svo þátttakendur geti einbeitt sér að því að læra.">
+<input type="radio" name="tilefni" value="Námskeið">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8l10-4.5L22 8l-10 4.5z"/><path d="M6 10v5c0 1.8 2.7 3 6 3s6-1.2 6-3v-5"/><path d="M20 9v5"/></svg>
+<span class="sg-t">Námskeið</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#FF5FA2;--cl:#FFE3F0;--ch:#FF2F8A;--d:.1s" data-q="Sýning?" data-d="Uppsetning bása og sýningarrýma sem draga að og sitja eftir.">
+<input type="radio" name="tilefni" value="Sýning">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3.5" width="18" height="12" rx="1.5"/><path d="M8 20.5l4-5 4 5"/></svg>
+<span class="sg-t">Sýning</span>
+</span></span>
+</label>
+
+<label class="sg" style="--c:#39D2F5;--cl:#E6FBFF;--ch:#22C7F0;--d:.45s" data-q="Eitthvað allt annað?" data-d="Hugmynd sem passar ekki í neinn flokk er einmitt sú sem okkur langar að heyra.">
+<input type="radio" name="tilefni" value="Annað">
+<span class="sg-neon"><span class="sg-glow">
+<svg class="sg-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7z"/><path d="M19 15.5c.2 1.3.9 2 2.2 2.2-1.3.2-2 .9-2.2 2.2-.2-1.3-.9-2-2.2-2.2 1.3-.2 2-.9 2.2-2.2z"/></svg>
+<span class="sg-t">Eitthvað annað</span>
+</span></span>
+</label>
+
+</div>
+<p class="k-desc" id="k-desc" aria-live="polite"></p>
+</fieldset>
+
+<div class="k-two">
+<div class="k-two-head">
+<div>
+<p class="k-step"><span class="k-step-n">2</span>Segðu okkur meira</p>
+<p class="k-two-p">Segðu okkur frá þinni hugmynd hér fyrir neðan.</p>
+</div>
+<div class="c-direct">
+<span>Eða sendu okkur línu beint</span>
+<a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>
+</div>
+</div>
+
+<div class="tk" id="tk">
+<div class="tk-stub" aria-hidden="true">
+<p class="tk-kick">Þinn viðburður</p>
+<p class="tk-what is-empty" id="tk-what">Veldu tilefni</p>
+<dl class="tk-meta">
+<div><dt>Dagsetning</dt><dd id="tk-date">Óákveðin</dd></div>
+<div><dt>Gestir</dt><dd id="tk-guests">–</dd></div>
+<div><dt>Fyrir</dt><dd id="tk-name">–</dd></div>
+</dl>
+<div class="tk-brand"><span class="tk-logo">húrra events</span><span class="tk-code"></span></div>
+<span class="tk-stamp">Móttekið</span>
+</div>
+
+<div class="tk-main">
+<div id="tk-form">
+<div class="tk-grid">
+<div class="tk-f">
+<label for="f-nafn">Nafn</label>
+<input id="f-nafn" name="nafn" type="text" autocomplete="name" placeholder="Fullt nafn" required>
+</div>
+<div class="tk-f">
+<label for="f-netfang">Netfang</label>
+<input id="f-netfang" name="netfang" type="email" autocomplete="email" placeholder="nafn@netfang.is" required>
+</div>
+<div class="tk-f">
+<label for="f-simi">Sími <span class="opt">(valfrjálst)</span></label>
+<input id="f-simi" name="simi" type="tel" autocomplete="tel" placeholder="000 0000">
+</div>
+<div class="tk-f">
+<label for="f-dags">Dagsetning <span class="opt">(ef hún er komin)</span></label>
+<input id="f-dags" name="dagsetning" type="date">
+</div>
+<div class="tk-f wide">
+<label for="f-fjoldi">Áætlaður fjöldi gesta</label>
+<input id="f-fjoldi" name="fjoldi" type="number" min="1" inputmode="numeric" placeholder="t.d. 80">
+</div>
+<div class="tk-f wide">
+<label for="f-hugmynd">Hugmyndin þín</label>
+<textarea id="f-hugmynd" name="hugmynd" rows="4" placeholder="Stemning, staðsetning, þema eða bara grófa hugmyndin. Ekkert þarf að vera fullmótað."></textarea>
+</div>
+</div>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p id="f-villa" class="f-error" role="alert"></p>
+<div class="tk-actions">
+<button type="submit" class="tk-submit" id="tk-submit"><span class="tk-spin" aria-hidden="true"></span><span class="tk-btn-t">Senda fyrirspurn</span><svg class="tk-ic" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12091A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
+</div>
+</div>
+
+<div class="tk-done" id="f-takk" tabindex="-1" hidden>
+<p class="tk-done-t">Takk fyrir!</p>
+<p>Fyrirspurnin þín er komin til okkar. Við heyrum í þér eins fljótt og hægt er.</p>
+</div>
+
+<div class="tk-fail" id="f-fail" tabindex="-1" hidden>
+<p class="tk-fail-t">Fyrirspurnin komst ekki til skila</p>
+<p>Ekkert mál. Opnaðu hana tilbúna í tölvupóstinum þínum eða sendu okkur línu beint á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>.</p>
+<div class="tk-fail-actions">
+<a class="btn-p" id="f-mailto" href="mailto:hurraevents@hurraevents.is">Opna í tölvupósti</a>
+<button type="button" class="btn-o" id="f-retry">Reyna aftur</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="ft">
+<div class="ft-in">
+<span class="ft-logo"><b>húrra</b><i>events</i></span>
+<span>Þitt tilefni, þitt húrra. · © 2026 Húrra Events</span>
+<button type="button" class="ft-replay" id="replay">Spila kynningu aftur</button>
+</div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root=document.documentElement;
+  function clamp(x){return x<0?0:x>1?1:x;}
+  function ss(a,b,x){x=clamp((x-a)/(b-a));return x*x*(3-2*x);}
+  function smooth(y){window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});}
+
+  /* Konfetti */
+  function burst(host,x,y,n,delay){
+    if(reduce||!host||!host.animate)return;
+    var cols=['#FF5FA2','#7FE7FF','#FFE3F0','#FFFFFF','#C8125F','#FFA94D'];
+    for(var i=0;i<n;i++){
+      var c=document.createElement('i');c.className='cf';c.style.left=x+'px';c.style.top=y+'px';c.style.background=cols[i%cols.length];
+      if(i%3===0){c.style.borderRadius='50%';c.style.width=c.style.height='8px';}
+      host.appendChild(c);
+      var a=Math.random()*Math.PI*2,v=120+Math.random()*260,dx=Math.cos(a)*v,dy=Math.sin(a)*v-120,r=Math.random()*720-360;
+      var an=c.animate([{transform:'translate(-50%,-50%) rotate(0)',opacity:1},{transform:'translate('+dx+'px,'+dy+'px) rotate('+r/2+'deg)',opacity:1,offset:.45},{transform:'translate('+dx*1.2+'px,'+(dy+340)+'px) rotate('+r+'deg)',opacity:0}],{duration:1800+Math.random()*900,easing:'cubic-bezier(.2,.7,.4,1)',delay:(delay||0)+Math.random()*250,fill:'both'});
+      an.onfinish=(function(el){return function(){el.remove();};})(c);
+    }
+  }
+
+  /* Fyrirsögnin: tilefnin blikka í gegn og lenda á „Þitt tilefni," */
+  var W=['Þín veisla,','Þín árshátíð,','Þitt brúðkaup,','Þitt golfmót,','Þín ráðstefna,','Þitt námskeið,','Þín sýning,','Þitt tilefni,'];
+  var l1=document.getElementById('hero-l1'),wT=null,wI=null;
+  function cycle(delay){
+    clearTimeout(wT);clearTimeout(wI);
+    l1.classList.remove('is-swap');
+    if(reduce){l1.classList.remove('is-cycling');l1.textContent=W[W.length-1];return;}
+    var i=0;l1.textContent=W[0];l1.classList.add('is-cycling');
+    function next(){
+      i++;if(i>=W.length)return;
+      l1.classList.remove('is-swap');void l1.offsetWidth;l1.classList.add('is-swap');
+      var k=i;wI=setTimeout(function(){l1.textContent=W[k];if(k===W.length-1)l1.classList.remove('is-cycling');},90);
+      wT=setTimeout(next,1000);
+    }
+    wT=setTimeout(next,delay);
+  }
+
+  /* Kynningin */
+  var intro=document.getElementById('intro');
+  var introHTML=intro.outerHTML;
+  function remember(){try{sessionStorage.setItem('hurra-intro','1');}catch(e){}}
+  function bind(el){
+    el.addEventListener('animationend',function(e){if(e.animationName==='hSlideUp'){el.remove();remember();}});
+    var s=el.querySelector('#skip');
+    if(s)s.addEventListener('click',function(){el.remove();root.classList.add('no-intro');remember();cycle(900);});
+  }
+  if(root.classList.contains('no-intro')||reduce){intro.remove();cycle(1100);}
+  else{bind(intro);cycle(4900);}
+  document.getElementById('replay').addEventListener('click',function(){
+    var old=document.getElementById('intro');if(old)old.remove();
+    root.classList.remove('no-intro');
+    var d=document.createElement('div');d.innerHTML=introHTML;var el=d.firstElementChild;
+    document.body.insertBefore(el,document.body.firstChild);bind(el);window.scrollTo({top:0,behavior:'instant'});
+    document.querySelectorAll('.h-rise').forEach(function(n){n.style.animation='none';n.offsetHeight;n.style.animation='';});
+    cycle(4900);
+  });
+
+  /* Hausinn: felur sig þegar skrollað er niður, birtist þegar skrollað er upp */
+  var hd=document.getElementById('hd'),lastY=window.scrollY;
+  function onHead(){
+    var y=window.scrollY;
+    hd.classList.toggle('is-solid',y>8);
+    if(y>lastY+4&&y>140&&!hd.contains(document.activeElement))hd.classList.add('is-hidden');
+    else if(y<lastY-4||y<=140)hd.classList.remove('is-hidden');
+    lastY=y;
+  }
+  hd.addEventListener('focusin',function(){hd.classList.remove('is-hidden');});
+
+  /* Valmynd í síma */
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger'),mClose=document.getElementById('menu-close');
+  function openMenu(){menu.hidden=false;root.classList.add('menu-open');burger.setAttribute('aria-expanded','true');mClose.focus();}
+  function closeMenu(back){menu.hidden=true;root.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');if(back)burger.focus();}
+  burger.addEventListener('click',openMenu);
+  mClose.addEventListener('click',function(){closeMenu(true);});
+  menu.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',function(){closeMenu(false);});});
+  menu.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeMenu(true);return;}
+    if(e.key!=='Tab')return;
+    var f=menu.querySelectorAll('a,button'),first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+
+  /* Upplifunin: forsíðan rennur yfir í skrefin þrjú */
+  var sec=document.getElementById('efst'),sticky=document.getElementById('xp'),hero=document.getElementById('hero'),st=document.getElementById('st'),bokeh=document.getElementById('bokeh'),spot=document.getElementById('spot'),stage=document.getElementById('st-stage');
+  var texts=st.querySelectorAll('.st-text'),scenes=st.querySelectorAll('.st-scene'),dots=st.querySelectorAll('.st-dot');
+  var fills=st.querySelectorAll('.st-fill'),N=texts.length,cue=document.getElementById('xp-cue'),cueT=document.getElementById('xp-cue-t');
+  var cur=null,ticking=false;
+  /* Það sem sést ekki á ekki að vera hægt að smella á eða tabba í */
+  function reach(el,on){
+    if(el._on===on)return;el._on=on;
+    el.style.pointerEvents=on?'':'none';
+    el.querySelectorAll('a,button').forEach(function(n){if(on)n.removeAttribute('tabindex');else n.setAttribute('tabindex','-1');});
+  }
+  function geo(){var vh=window.innerHeight,total=Math.max(1,sec.offsetHeight-vh),E=total*.17;return{top:sec.getBoundingClientRect().top+window.scrollY,E:E,L:(total-E)/N,total:total};}
+  function setStep(i){
+    if(i===cur)return;cur=i;sticky.setAttribute('data-step',i);
+    for(var k=0;k<N;k++){texts[k].classList.toggle('is-active',k===i);scenes[k].classList.toggle('is-active',k===i);dots[k].classList.toggle('is-on',k<=i);}
+    cueT.textContent=i<0?'Skrollaðu og sjáðu hvernig':i<N-1?'Næsta skref':'Næst: kveikjum á hugmyndinni þinni';
+    if(i===N-1)burst(stage,stage.clientWidth/2,stage.clientHeight*.42,70,900);
+  }
+  function frame(){
+    ticking=false;onHead();
+    var g=geo(),s=clamp((window.scrollY-g.top)/g.total)*g.total,t=clamp(s/g.E);
+    var e=ss(0,.55,t),a=ss(.45,.95,t);
+    hero.style.opacity=(1-e).toFixed(3);
+    hero.style.transform=reduce?'':'translateY('+(-30*e).toFixed(1)+'px) scale('+(1+.16*e).toFixed(3)+')';
+    reach(hero,e<.5);
+    st.style.opacity=a.toFixed(3);
+    st.style.transform=reduce?'':'scale('+(.94+.06*a).toFixed(3)+')';
+    reach(st,a>=.5);
+    if(!reduce)bokeh.style.transform='scale('+(1+.3*e).toFixed(3)+')';
+    spot.style.opacity=(1-e).toFixed(3);
+    setStep(t<.55?-1:Math.min(N-1,Math.max(0,Math.floor((s-g.E)/g.L))));
+    for(var j=0;j<fills.length;j++)fills[j].style.transform='scaleX('+clamp((s-g.E-g.L*j)/g.L).toFixed(3)+')';
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',req);
+  function goStep(i){var g=geo();smooth(g.top+g.E+g.L*i+g.L*.25);}
+  dots.forEach(function(d){d.addEventListener('click',function(){goStep(+d.getAttribute('data-go'));});});
+  cue.addEventListener('click',function(){
+    if(cur===null||cur<N-1)goStep(cur===null||cur<0?0:cur+1);
+    else smooth(document.getElementById('hafa-samband').getBoundingClientRect().top+window.scrollY);
+  });
+  if(window.matchMedia('(pointer: fine)').matches&&!reduce){
+    var px=0,py=0,pq=false;
+    sticky.addEventListener('pointermove',function(e){px=e.clientX;py=e.clientY;if(!pq){pq=true;requestAnimationFrame(function(){pq=false;spot.style.setProperty('--mx',px+'px');spot.style.setProperty('--my',py+'px');});}});
+  }
+  frame();
+
+  /* Tilefnisskiltin: kvikna þegar komið er að þeim */
+  var wall=document.getElementById('k-wall'),desc=document.getElementById('k-desc');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){wall.classList.add('is-lit');io.disconnect();}});},{threshold:.3});
+    io.observe(wall);
+  }else wall.classList.add('is-lit');
+  function v(id){return document.getElementById(id).value.trim();}
+  function setDesc(html,err){desc.innerHTML=html;desc.classList.toggle('is-err',!!err);desc.classList.remove('is-new');if(html){void desc.offsetWidth;desc.classList.add('is-new');}}
+
+  /* Miðinn: sýnir tilefnið og upplýsingarnar jafnóðum */
+  var tk=document.getElementById('tk'),tkWhat=document.getElementById('tk-what'),tkDate=document.getElementById('tk-date'),tkGuests=document.getElementById('tk-guests'),tkName=document.getElementById('tk-name');
+  var MON=['janúar','febrúar','mars','apríl','maí','júní','júlí','ágúst','september','október','nóvember','desember'];
+  function niceDate(s){var d=(s||'').split('-');if(d.length!==3||!MON[+d[1]-1])return s||'';return (+d[2])+'. '+MON[+d[1]-1]+' '+d[0];}
+  function syncTicket(){tkName.textContent=v('f-nafn')||'–';tkDate.textContent=niceDate(v('f-dags'))||'Óákveðin';tkGuests.textContent=v('f-fjoldi')||'–';}
+  ['f-nafn','f-dags','f-fjoldi'].forEach(function(id){var el=document.getElementById(id);el.addEventListener('input',syncTicket);el.addEventListener('change',syncTicket);});
+  wall.addEventListener('change',function(e){
+    var lab=e.target.closest('.sg');if(!lab)return;
+    wall.querySelectorAll('.sg').forEach(function(s){s.classList.toggle('is-on',s===lab);});
+    wall.classList.add('has-pick');
+    setDesc('<span class="k-desc-q">'+lab.getAttribute('data-q')+' <b>Húrra!</b></span><span class="k-desc-d">'+lab.getAttribute('data-d')+'</span>');
+    var cs=getComputedStyle(lab);
+    tk.style.setProperty('--tc',cs.getPropertyValue('--c').trim());
+    tk.style.setProperty('--tcl',cs.getPropertyValue('--cl').trim());
+    tk.style.setProperty('--tch',cs.getPropertyValue('--ch').trim());
+    tkWhat.textContent=lab.querySelector('.sg-t').textContent;
+    tkWhat.classList.remove('is-empty','is-new');
+    if(!reduce){void tkWhat.offsetWidth;tkWhat.classList.add('is-new');}
+    var r=desc.getBoundingClientRect();
+    if(r.bottom>window.innerHeight)desc.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+  });
+
+  /* Fyrirspurnin: fer beint á netfangið í gegnum FormSubmit (formsubmit.co) */
+  var EMAIL='hurraevents@hurraevents.is';
+  var ENDPOINT='https://formsubmit.co/ajax/'+EMAIL;
+  var form=document.getElementById('fyrirspurn'),err=document.getElementById('f-villa'),fields=document.getElementById('tk-form'),done=document.getElementById('f-takk'),fail=document.getElementById('f-fail'),btn=document.getElementById('tk-submit'),btnT=btn.querySelector('.tk-btn-t'),mailA=document.getElementById('f-mailto'),ksec=document.getElementById('hafa-samband');
+  function picked(){var r=form.querySelector('input[name="tilefni"]:checked');return r?r.value:'';}
+  function joinIs(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' og '+a[a.length-1];}
+  var shown=false;
+  function check(full){
+    var parts=[],miss=[],first=null,t=picked(),radios=form.querySelectorAll('input[name="tilefni"]');
+    radios.forEach(function(r){if(t)r.removeAttribute('aria-invalid');else if(full)r.setAttribute('aria-invalid','true');});
+    if(!t){parts.push('veldu tilefni');first=radios[0];}
+    var nafn=document.getElementById('f-nafn'),net=document.getElementById('f-netfang');
+    var okN=nafn.value.trim()!=='',nv=net.value.trim(),okE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(nv);
+    if(full||nafn.hasAttribute('aria-invalid'))nafn.setAttribute('aria-invalid',okN?'false':'true');
+    if(full||net.hasAttribute('aria-invalid'))net.setAttribute('aria-invalid',okE?'false':'true');
+    if(!okN){miss.push('nafn');first=first||nafn;}
+    if(!okE){miss.push(nv?'gilt netfang':'netfang');first=first||net;}
+    if(miss.length)parts.push('fylltu út '+joinIs(miss));
+    return{msg:parts.length?'Vinsamlegast '+parts.join(' og ')+'.':'',first:first,t:t};
+  }
+  function liveErr(){if(!shown)return;var r=check(false);if(err.textContent!==r.msg)err.textContent=r.msg;if(!r.msg)shown=false;}
+  form.addEventListener('input',liveErr);
+  form.addEventListener('change',liveErr);
+  function details(t){
+    return [['Tilefni',t],['Nafn',v('f-nafn')],['Netfang',v('f-netfang')],['Sími',v('f-simi')||'-'],['Dagsetning',niceDate(v('f-dags'))||'Ekki ákveðin'],['Fjöldi gesta',v('f-fjoldi')||'-'],['Hugmyndin',v('f-hugmynd')||'-']];
+  }
+  function subject(t){return 'Ný fyrirspurn: '+t+' – '+v('f-nafn');}
+  function show(which){fields.hidden=which!=='form';done.hidden=which!=='done';fail.hidden=which!=='fail';}
+  function busy(on){btn.disabled=on;btn.classList.toggle('is-busy',on);btnT.textContent=on?'Sendi…':'Senda fyrirspurn';}
+  function sent(){
+    show('done');tk.classList.add('is-sent');
+    done.focus({preventScroll:true});
+    tk.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'});
+    var kr=ksec.getBoundingClientRect(),tr=tk.getBoundingClientRect();
+    burst(ksec,tr.left-kr.left+tr.width/2,tr.top-kr.top+tr.height/2,90,350);
+  }
+  function failed(t){
+    var body=details(t).map(function(p){return p[0]+': '+p[1];}).join('\n');
+    mailA.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subject(t))+'&body='+encodeURIComponent(body);
+    show('fail');fail.focus({preventScroll:true});
+    fail.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+  }
+  document.getElementById('f-retry').addEventListener('click',function(){show('form');btn.focus();});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(btn.disabled)return;
+    var r=check(true),t=r.t;
+    if(r.msg){
+      shown=true;err.textContent=r.msg;
+      if(!t){
+        setDesc('<span class="k-desc-q">Veldu tilefni hér fyrir ofan.</span>',true);
+        wall.classList.remove('is-shake');void wall.offsetWidth;wall.classList.add('is-shake');
+      }
+      r.first.focus();return;
+    }
+    err.textContent='';
+    if(form.elements._honey&&form.elements._honey.value){sent();return;}
+    var data={_subject:subject(t),_template:'table',_captcha:'false',_replyto:v('f-netfang')};
+    details(t).forEach(function(p){data[p[0]]=p[1];});
+    busy(true);
+    var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort();},15000),req;
+    try{req=fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data),signal:ctl?ctl.signal:undefined});}
+    catch(x){req=Promise.reject(x);}
+    req.then(function(res){return res.json().catch(function(){return{};}).then(function(j){return{ok:res.ok,j:j};});})
+      .then(function(o){if(o.ok&&(o.j.success===true||o.j.success==='true'))sent();else failed(t);})
+      .catch(function(){failed(t);})
+      .then(function(){clearTimeout(timer);busy(false);});
+  });
+})();
+</script>
+</body>
+</html>
