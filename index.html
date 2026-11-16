@@ -133,7 +133,7 @@ img,svg{max-width:100%}
 .xp-cue svg{animation:stCue 1.6s ease-in-out infinite}
 
 .st{position:absolute;inset:0;opacity:0;will-change:opacity,transform}
-.st-inner{position:relative;height:100%;max-width:1240px;margin:0 auto;padding:30px 24px 78px;box-sizing:border-box;display:grid;grid-template-rows:auto minmax(0,1fr);gap:20px}
+.st-inner{position:relative;height:100%;max-width:1240px;margin:0 auto;padding:30px 24px 78px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:20px}
 .st-scene .t-in{opacity:0}
 .st-scene.is-active .t-in{animation:stFadeIn .4s ease var(--at,0s) both}
 .st-scene.is-active .t-out{animation:stFadeOut .3s ease var(--at,0s) both}
@@ -161,7 +161,7 @@ img,svg{max-width:100%}
 .st-line i{display:block;height:100%;width:100%;background:#FF5FA2;box-shadow:0 0 8px #FF2F8A;transform-origin:left;transform:scaleX(0)}
 .st-dot{display:flex;align-items:center;gap:10px;min-height:44px;padding:0;border:0;background:none;color:#8E7D8C;font:500 15px 'Inter',sans-serif;cursor:pointer;transition:color .4s}
 .st-dot span{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1.5px solid #4A3550;font-family:'Tilt Neon',sans-serif;font-size:18px;transition:all .4s}
-.st-dot em{font-style:normal;white-space:nowrap}
+.st-dot em{font-style:normal;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .st-dot.is-on{color:#FFFFFF}
 .st-dot.is-on span{border-color:#FF5FA2;color:#FFE3F0;box-shadow:0 0 14px rgba(255,47,138,.6),inset 0 0 8px rgba(255,47,138,.4);text-shadow:0 0 6px #FF5FA2}
 .st-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center;min-height:0}
@@ -171,8 +171,8 @@ img,svg{max-width:100%}
 .st-num{font-family:'Tilt Neon',sans-serif;font-size:clamp(56px,8vw,96px);line-height:1;color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF5FA2,0 0 44px #FF2F8A}
 .st-text h2{margin:0;font-family:'Tilt Neon',sans-serif;font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:1.05;color:#FFFFFF}
 .st-text p{margin:0;max-width:460px;font-size:clamp(17px,1.6vw,19px);line-height:1.6;color:#D9CCD5}
-.st-stage{position:relative;display:grid;height:100%;max-height:560px;min-height:0}
-.st-scene{grid-area:1/1;width:100%;height:100%;opacity:0;transform:scale(.94);transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.3,1);overflow:visible}
+.st-stage{position:relative;height:100%;max-height:560px;min-height:0;min-width:0}
+.st-scene{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;transform:scale(.94);transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.3,1);overflow:visible}
 .st-scene.is-active{opacity:1;transform:none}
 .st-scene *{transform-box:fill-box}
 .st-scene .pop{opacity:0}
@@ -214,14 +214,15 @@ img,svg{max-width:100%}
 @media (max-width:900px){
 .st-kicker{margin-bottom:8px}
 .st-dot em{display:none}
-.st-dot.is-on em{display:inline}
+.st-dot.is-cur em{display:inline}
 .st-body{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:16px;align-items:stretch}
 .st-text{gap:10px}
 .st-num{font-size:48px}
 .st-text h2{font-size:clamp(28px,7vw,38px)}
 .st-text p{font-size:16px}
 }
-@media (max-width:420px){.st-dot.is-on em{display:none}}
+@media (max-width:600px){.st-dot.is-cur em{display:none}.st-text p{font-size:15.5px;line-height:1.5}.st-num{font-size:40px}.st-text h2{font-size:clamp(26px,6.8vw,34px)}}
+@media (max-width:600px) and (max-height:700px){.st-kicker{display:none}.st-num{font-size:34px}.st-text{gap:6px}.st-text p{font-size:14.5px}}
 @media (prefers-reduced-motion: reduce){
 .st-text,.st-scene{transition:none}
 .st-scene *,.st-cue svg{animation:none !important}
@@ -878,7 +879,7 @@ html{scroll-behavior:auto}
   function geo(){var vh=window.innerHeight,total=Math.max(1,sec.offsetHeight-vh),E=total*.17;return{top:sec.getBoundingClientRect().top+window.scrollY,E:E,L:(total-E)/N,total:total};}
   function setStep(i){
     if(i===cur)return;cur=i;sticky.setAttribute('data-step',i);
-    for(var k=0;k<N;k++){texts[k].classList.toggle('is-active',k===i);scenes[k].classList.toggle('is-active',k===i);dots[k].classList.toggle('is-on',k<=i);}
+    for(var k=0;k<N;k++){texts[k].classList.toggle('is-active',k===i);scenes[k].classList.toggle('is-active',k===i);dots[k].classList.toggle('is-on',k<=i);dots[k].classList.toggle('is-cur',k===i);}
     cueT.textContent=i<0?'Skrollaðu og sjáðu hvernig':i<N-1?'Næsta skref':'Næst: kveikjum á hugmyndinni þinni';
     if(i===N-1)burst(stage,stage.clientWidth/2,stage.clientHeight*.42,70,900);
   }
