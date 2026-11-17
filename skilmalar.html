@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skilmálar og persónuvernd – Húrra Events</title>
+<meta name="description" content="Skilmálar Húrra Events um bókanir, greiðslur og afbókanir, og hvernig við förum með persónuupplýsingar.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="is_IS">
+<meta property="og:site_name" content="Húrra Events">
+<meta property="og:title" content="Skilmálar og persónuvernd – Húrra Events">
+<meta property="og:description" content="Skilmálar Húrra Events um bókanir, greiðslur og afbókanir, og hvernig við förum með persónuupplýsingar.">
+<meta property="og:url" content="https://hurraevents.is/skilmalar.html">
+<meta property="og:image" content="https://hurraevents.is/og-mynd.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Tilt+Neon&display=swap">
+<style>
+html{scroll-behavior:smooth}body{margin:0;background:#0B0610;-webkit-font-smoothing:antialiased}
+a{color:#FFE3F0}a:hover{color:#FFFFFF}
+@keyframes hNeonOn{
+0%{color:#3B2234;text-shadow:none}
+6%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}
+9%{color:#3B2234;text-shadow:none}
+15%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}
+18%{color:#3B2234;text-shadow:none}
+26%,100%{color:#FFE3F0;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF5FA2,0 0 42px #FF2F8A,0 0 80px #FF2F8A}}
+@keyframes hNeonBlue{
+0%{color:#23343A;text-shadow:none}
+8%{color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5,0 0 34px #22C7F0}
+12%{color:#23343A;text-shadow:none}
+30%,100%{color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5,0 0 34px #22C7F0}}
+@keyframes hGlow{0%,25%{opacity:0}60%,100%{opacity:1}}
+@keyframes hSlideUp{0%{transform:translateY(0)}100%{transform:translateY(-100%)}}
+@keyframes hRise{0%{opacity:0;transform:translateY(28px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes hBuzz{0%,92%,100%{opacity:1}93%{opacity:.4}94%{opacity:1}95.5%{opacity:.55}96.5%{opacity:1}}
+.h-intro{position:fixed;inset:0;z-index:50;background:#0B0610;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2vh;animation:hSlideUp .9s cubic-bezier(.7,0,.2,1) 3.1s both}
+.h-l{display:inline-block;color:#3B2234;animation:hNeonOn 1.5s linear both}
+.h-sub{color:#23343A;animation:hNeonBlue 1.3s linear 1.6s both}
+.h-glow{animation:hGlow 2.4s ease-out both}
+.h-rise{animation:hRise .9s cubic-bezier(.2,.8,.3,1) both}
+.h-buzz{animation:hBuzz 8s linear 4s infinite}
+.h-skip{position:absolute;right:24px;bottom:24px;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid #4A3550;background:transparent;color:#D9CCD5;font:500 15px 'Inter',sans-serif;cursor:pointer}
+.h-skip:hover{border-color:#FF5FA2;color:#FFFFFF}
+.h-link{text-decoration:none}
+.h-link:hover{color:#FFFFFF}
+@media (prefers-reduced-motion: reduce){.h-intro{display:none}.h-l,.h-sub,.h-glow,.h-rise,.h-buzz{animation:none !important;color:#FFE3F0}}
+
+img,svg{max-width:100%}
+.c-wrap{position:relative;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.c-intro{display:flex;flex-direction:column;gap:24px;text-align:left;padding-top:12px}
+.c-direct{margin-top:12px;padding-top:22px;border-top:1px solid #3A2742;display:flex;flex-direction:column;gap:6px;font-size:15px;color:#B9A9B7}
+.c-direct a{font-size:19px;font-weight:500;color:#7FE7FF;text-decoration:none}
+.c-direct a:hover{text-decoration:underline}
+@media (max-width:900px){.c-wrap{grid-template-columns:minmax(0,1fr);gap:36px}}
+.f-card{width:100%;box-sizing:border-box;padding:clamp(22px,4vw,40px);border-radius:26px;background:rgba(20,11,28,.88);border:1px solid #3A2742;text-align:left}
+.f-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.f-wide{grid-column:1/-1}
+@media (max-width:640px){.f-grid{grid-template-columns:minmax(0,1fr)}}
+.f-field{display:flex;flex-direction:column;gap:8px}
+.f-field label{font-size:15px;font-weight:600;color:#FFFFFF}
+.f-opt{font-weight:400;color:#B9A9B7}
+.f-field input,.f-field select,.f-field textarea{box-sizing:border-box;width:100%;min-height:50px;padding:12px 14px;border-radius:14px;border:1px solid #4A3550;background:#0B0610;color:#FFFFFF;font:400 16px 'Inter',sans-serif;color-scheme:dark}
+.f-field textarea{resize:vertical;line-height:1.5}
+.f-field input::placeholder,.f-field textarea::placeholder{color:#8E7D8C}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{outline:none;border-color:#FF5FA2;box-shadow:0 0 0 3px rgba(255,95,162,.25)}
+.f-field [aria-invalid="true"]{border-color:#FF8A8A}
+.f-error{margin:16px 0 0;font-size:15px;color:#FFB3B3}
+.f-error:empty{margin:0}
+.f-submit{margin-top:22px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 34px;border:0;border-radius:999px;background:#FF5FA2;color:#12091A;font:600 17px 'Inter',sans-serif;cursor:pointer;box-shadow:0 0 28px rgba(255,47,138,.5)}
+.f-submit:hover{background:#FF7BB3}
+.f-thanks{text-align:center;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.6;color:#D9CCD5}
+.f-thanks[hidden]{display:none}
+.f-thanks p{margin:0}
+.f-thanks-title{font-family:'Tilt Neon',sans-serif;font-size:44px;color:#FFE3F0 !important;text-shadow:0 0 6px #FF5FA2,0 0 20px #FF2F8A}
+.f-thanks a{color:#7FE7FF}
+/* ---------- Haus ---------- */
+.hd{position:fixed;top:0;left:0;right:0;z-index:30;border-bottom:1px solid transparent;transition:transform .45s cubic-bezier(.2,.8,.3,1),background-color .35s,border-color .35s}
+.hd.is-solid{background:rgba(11,6,16,.74);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:rgba(58,39,66,.7)}
+.hd.is-hidden{transform:translateY(-102%)}
+.hd-in{max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Tilt Neon',sans-serif;font-size:32px;line-height:1;color:#FFE3F0;text-shadow:0 0 5px #FF5FA2,0 0 14px #FF2F8A;text-decoration:none;white-space:nowrap}
+.logo:hover{color:#FFFFFF}
+.hd-nav{display:flex;align-items:center;gap:4px 28px;font-size:16px;font-weight:500}
+.hd-nav a{padding:12px 0;color:#D9CCD5;text-decoration:none}
+.hd-nav a:hover{color:#FFFFFF}
+.hd-nav .hd-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;border:1.5px solid #FF5FA2;color:#FFE3F0;transition:background .2s,box-shadow .2s}
+.hd-nav .hd-cta:hover{background:rgba(255,95,162,.12);box-shadow:0 0 18px rgba(255,47,138,.35)}
+.hd-burger{display:none;align-items:center;justify-content:center;width:46px;height:46px;padding:0;border-radius:50%;border:1.5px solid #4A3550;background:rgba(11,6,16,.45);color:#FFE3F0;cursor:pointer}
+.hd-burger:hover{border-color:#FF5FA2}
+@media (max-width:860px){.hd-nav{display:none}.hd-burger{display:inline-flex}.logo{font-size:28px}.hd-in{padding:14px 20px}}
+
+/* Valmynd í síma */
+.menu{position:fixed;inset:0;z-index:40;box-sizing:border-box;display:flex;flex-direction:column;padding:14px 20px 32px;overflow-y:auto;background:#0B0610}
+.menu[hidden]{display:none}
+.menu::before{content:"";position:absolute;left:50%;top:40%;width:700px;height:500px;margin:-250px 0 0 -350px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,47,138,.18),rgba(255,47,138,0));pointer-events:none}
+.menu-top{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:46px}
+.menu-nav{position:relative;display:flex;flex-direction:column;gap:4px;margin:auto 0;padding:40px 0}
+.menu-nav a{padding:8px 0;font-family:'Tilt Neon',sans-serif;font-size:clamp(36px,10.5vw,54px);line-height:1.15;color:#FFE3F0;text-decoration:none;text-shadow:0 0 6px #FF5FA2,0 0 18px #FF2F8A;animation:menuOn 1s linear calc(var(--i) * .13s) both}
+.menu-nav a:nth-child(2){color:#E6FBFF;text-shadow:0 0 6px #7FE7FF,0 0 16px #39D2F5}
+@keyframes menuOn{0%{opacity:.08}10%{opacity:1}15%{opacity:.12}25%{opacity:1}30%{opacity:.3}45%,100%{opacity:1}}
+.menu-mail{position:relative;margin:18px 0 0;text-align:center;font-size:15px;color:#B9A9B7}
+
+/* Hnappar */
+.btn-p,.btn-o{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:999px;font-size:17px;font-weight:600;text-decoration:none;box-sizing:border-box;transition:background .2s,box-shadow .2s,border-color .2s}
+.btn-p{background:#FF5FA2;color:#12091A;box-shadow:0 0 24px rgba(255,47,138,.45)}
+.btn-p:hover{background:#FF7BB3;color:#12091A;box-shadow:0 0 36px rgba(255,47,138,.65)}
+.btn-o{border:1.5px solid #4A3550;color:#FFFFFF}
+.btn-o:hover{border-color:#7FE7FF;color:#FFFFFF;box-shadow:0 0 18px rgba(127,231,255,.25)}
+
+html.menu-open{overflow:hidden}
+.hd.is-solid{background:rgba(11,6,16,.9)}
+.hd-space{height:78px}
+@media (max-width:860px){.hd-space{height:74px}}
+@media (prefers-reduced-motion: reduce){.menu-nav a{animation:none !important}}
+/* Myndin af Hönnu Rún */
+.me{position:relative;margin:0;width:100%;max-width:480px;justify-self:center}
+.me::before{content:"";position:absolute;inset:0;border:2px solid #FF5FA2;border-radius:26px;transform:translate(14px,14px);box-shadow:0 0 18px rgba(255,95,162,.35)}
+.me img{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:26px;background:#F3D3E1;box-shadow:0 30px 60px -30px rgba(200,18,95,.5)}
+.me-tag{position:absolute;left:-12px;bottom:28px;z-index:1;display:flex;flex-direction:column;gap:2px;padding:12px 18px;border-radius:16px;background:#0B0610;transform:rotate(-4deg);box-shadow:0 12px 30px rgba(11,6,16,.35)}
+.me-tag b{font-weight:400;font-family:'Tilt Neon',sans-serif;font-size:26px;line-height:1.1;color:#FFE3F0;text-shadow:0 0 5px #FF5FA2,0 0 14px #FF2F8A}
+.me-tag span{font-size:13px;color:#D9CCD5}
+@media (max-width:640px){.me-tag{left:-6px;bottom:20px}.me-tag b{font-size:22px}}
+
+/* Skilmálar */
+.terms{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.terms h2{margin:36px 0 0;font-family:'Tilt Neon',sans-serif;font-weight:400;font-size:clamp(26px,3vw,32px);line-height:1.15;color:#1A1020;scroll-margin-top:110px}
+.terms h2 .n{color:#C8125F}
+.terms p,.terms li{margin:0;font-size:17px;line-height:1.7;color:#4A3A48}
+.terms ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+.terms li::marker{color:#C8125F}
+.terms b{color:#1A1020;font-weight:600}
+.terms a{color:#C8125F;text-underline-offset:3px}
+.terms a:hover{color:#1A1020}
+.toc{margin:0;padding:22px 26px;border-radius:20px;background:#FFFFFF;border:1px solid #F3D3E1}
+.toc p{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8A6F82}
+.toc ol{margin:0;padding-left:22px;columns:2;column-gap:32px}
+.toc li{font-size:16px;line-height:1.5;padding:4px 0;break-inside:avoid}
+.tbl{overflow-x:auto;border-radius:16px;border:1px solid #F0CFE0;background:#FFFFFF}
+.tbl table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5;color:#4A3A48}
+.tbl th{text-align:left;font-weight:600;color:#1A1020;background:#FFE3F0}
+.tbl th,.tbl td{padding:12px 16px;vertical-align:top;border-bottom:1px solid #F3D3E1}
+.tbl tr:last-child td{border-bottom:0}
+@media (max-width:640px){.toc ol{columns:1}.terms p,.terms li{font-size:16px}
+.stack thead{display:none}.stack tr{display:block;padding:14px 16px;border-bottom:1px solid #F3D3E1}.stack tr:last-child{border-bottom:0}.stack td{display:block;padding:3px 0;border:0}.stack td::before{content:attr(data-label);display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A6F82}}
+</style>
+</head>
+<body style="font-family: 'Inter', system-ui, sans-serif; color: #F3E9F0">
+<!-- Haus -->
+
+
+<!-- Hetja -->
+<header class="hd" id="hd">
+<div class="hd-in">
+<a href="index.html" class="logo">húrra events</a>
+<nav class="hd-nav" aria-label="Aðalvalmynd">
+<a href="index.html#thjonusta">Þjónusta</a>
+<a href="index.html#ferlid">Svona virkar þetta</a>
+<a href="um.html">Um Húrra Events</a>
+<a href="index.html#hafa-samband" class="hd-cta">Senda fyrirspurn</a>
+</nav>
+<button type="button" class="hd-burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Opna valmynd">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+</button>
+</div>
+</header>
+<div class="hd-space" aria-hidden="true"></div>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Valmynd" hidden>
+<div class="menu-top">
+<a href="index.html" class="logo">húrra events</a>
+<button type="button" class="hd-burger" id="menu-close" style="display:inline-flex" aria-label="Loka valmynd">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+</div>
+<nav class="menu-nav" aria-label="Valmynd">
+<a href="index.html#ferlid" style="--i:0">Svona virkar þetta</a>
+<a href="index.html#thjonusta" style="--i:1">Þjónusta</a>
+<a href="um.html" style="--i:2">Um Húrra Events</a>
+</nav>
+<a href="index.html#hafa-samband" class="btn-p">Senda fyrirspurn</a>
+<p class="menu-mail">hurraevents@hurraevents.is</p>
+</div>
+
+<section style="position: relative; overflow: hidden; padding: 72px 24px 80px">
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 0; width: 1000px; height: 460px; margin-left: -500px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 47, 138, 0.16), rgba(255, 47, 138, 0))"></div>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
+<a href="index.html" class="h-link" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; color: #D9CCD5"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></svg>Til baka á forsíðu</a>
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #7FE7FF">Skilmálar</p>
+<h1 style="margin: 0; font-family: 'Tilt Neon', sans-serif; font-weight: 400; font-size: clamp(44px, 6.5vw, 88px); line-height: 1.04; color: #FFFFFF">Skilmálar og <span style="color: #FFE3F0; text-shadow: 0 0 6px #FF5FA2, 0 0 20px #FF5FA2, 0 0 44px #FF2F8A">persónuvernd.</span></h1>
+<p style="margin: 0; font-size: 17px; color: #D9CCD5">Gilda frá 17. nóvember 2026.</p>
+</div>
+</section>
+
+<section style="background: #FFF4F8; color: #1A1020; padding: 72px 24px 104px">
+<div class="terms">
+<nav class="toc" aria-label="Efnisyfirlit"><p>Efnisyfirlit</p><ol><li><a href="#um">Um Húrra Events</a></li><li><a href="#fyrirspurnir">Fyrirspurnir og tilboð</a></li><li><a href="#bokun">Bókun og staðfestingargjald</a></li><li><a href="#verd">Verð og greiðslur</a></li><li><a href="#breytingar">Breytingar á viðburði</a></li><li><a href="#afbokun">Afbókun</a></li><li><a href="#thridju">Þjónusta þriðju aðila</a></li><li><a href="#abyrgd">Ábyrgð</a></li><li><a href="#ovidradanleg">Óviðráðanleg atvik</a></li><li><a href="#myndir">Myndir frá viðburðum</a></li><li><a href="#personuvernd">Persónuvernd</a></li><li><a href="#vefurinn">Vefurinn</a></li><li><a href="#log">Lög og breytingar</a></li></ol></nav>
+<h2 id="um"><span class="n">1.</span> Um Húrra Events</h2>
+<p>Skilmálar þessir gilda um alla þjónustu Húrra Events, hvort sem hún er bókuð á hurraevents.is, í tölvupósti eða í síma. Þú nærð í okkur á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>.</p>
+<p>Í skilmálunum er Húrra Events kallað „við“ og sá sem kaupir þjónustuna „þú“.</p>
+<h2 id="fyrirspurnir"><span class="n">2.</span> Fyrirspurnir og tilboð</h2>
+<p>Fyrirspurn á hurraevents.is er ekki bókun og skuldbindur hvorki þig né okkur.</p>
+<ul>
+<li>Við svörum fyrirspurnum eins fljótt og hægt er og sendum tilboð út frá upplýsingunum sem þú gefur.</li>
+<li>Tilboð gildir í 14 daga frá dagsetningu þess nema annað sé tekið fram.</li>
+<li>Verð í tilboði miðast við forsendurnar sem lágu fyrir, svo sem fjölda gesta, dagsetningu og umfang. Breytist þær getur verðið breyst.</li>
+</ul>
+<h2 id="bokun"><span class="n">3.</span> Bókun og staðfestingargjald</h2>
+<p>Bókun er staðfest þegar þú hefur samþykkt tilboð skriflega, til dæmis í tölvupósti, og greitt staðfestingargjald.</p>
+<ul>
+<li>Staðfestingargjald er 30% af heildarverði og greiðist innan 7 daga frá samþykki tilboðs.</li>
+<li>Dagsetningin er frátekin fyrir þig þegar staðfestingargjaldið hefur borist.</li>
+<li>Staðfestingargjaldið dregst frá lokagreiðslu.</li>
+</ul>
+<h2 id="verd"><span class="n">4.</span> Verð og greiðslur</h2>
+<p>Verð til einstaklinga eru með virðisaukaskatti. Í tilboðum til fyrirtækja kemur skýrt fram hvort verð er með eða án virðisaukaskatts.</p>
+<ul>
+<li>Öll verð eru í íslenskum krónum.</li>
+<li>Eftirstöðvar greiðast í síðasta lagi 14 dögum fyrir viðburð, nema um annað sé samið.</li>
+<li>Aukaþjónusta eða aukinn gestafjöldi sem samið er um eftir bókun er gerður upp eftir viðburð með reikningi, með 14 daga greiðslufresti.</li>
+<li>Greitt er með millifærslu gegn reikningi.</li>
+<li>Berist greiðsla ekki á gjalddaga reiknast dráttarvextir samkvæmt lögum nr. 38/2001 um vexti og verðtryggingu.</li>
+</ul>
+<h2 id="breytingar"><span class="n">5.</span> Breytingar á viðburði</h2>
+<p>Láttu okkur vita af breytingum á fjölda gesta, dagsetningu eða umfangi eins fljótt og hægt er, í síðasta lagi 14 dögum fyrir viðburð.</p>
+<ul>
+<li>Við reynum alltaf að verða við breytingum, en það er háð því að salur og aðrir birgjar geti það líka.</li>
+<li>Breytingar geta haft áhrif á verð. Ef svo er færðu nýtt verð áður en breytingin tekur gildi.</li>
+<li>Hægt er að færa viðburð á nýja dagsetningu einu sinni án gjalds ef það er tilkynnt meira en 60 dögum fyrir viðburð.</li>
+</ul>
+<h2 id="afbokun"><span class="n">6.</span> Afbókun</h2>
+<p>Afbókun þarf að berast skriflega á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>. Gjaldið fer eftir því hve langt er í viðburðinn:</p>
+<div class="tbl"><table>
+<thead><tr><th scope="col">Afbókað</th><th scope="col">Þú greiðir</th></tr></thead>
+<tbody>
+<tr><td>Meira en 60 dögum fyrir viðburð</td><td>Staðfestingargjaldið, sem fæst ekki endurgreitt</td></tr>
+<tr><td>30–60 dögum fyrir viðburð</td><td>50% af heildarverði</td></tr>
+<tr><td>Minna en 30 dögum fyrir viðburð</td><td>100% af heildarverði</td></tr>
+</tbody>
+</table></div>
+<ul>
+<li>Kostnaður sem þegar hefur fallið til hjá þriðju aðilum og fæst ekki endurgreiddur, til dæmis óendurkræf salarleiga, greiðist alltaf.</li>
+<li>Þurfum við að afbóka endurgreiðum við allt sem þú hefur greitt.</li>
+</ul>
+<p><b>Réttur neytenda.</b> Einstaklingur sem gerir samning í fjarsölu, til dæmis í tölvupósti eða síma, getur átt rétt á að falla frá honum innan 14 daga samkvæmt lögum nr. 16/2016 um neytendasamninga. Óskir þú þess að vinna hefjist innan þess frests biðjum við um skriflega ósk þar um, og fallir þú síðan frá samningnum greiðir þú fyrir þá vinnu sem þegar hefur verið unnin. Ekkert í þessum skilmálum skerðir lögbundin réttindi neytenda.</p>
+<h2 id="thridju"><span class="n">7.</span> Þjónusta þriðju aðila</h2>
+<p>Við skipuleggjum viðburðinn og höfum milligöngu um þjónustu annarra, svo sem sala, veitinga, skemmtikrafta, ljósmyndara og tækjaleigu.</p>
+<ul>
+<li>Um þá þjónustu gilda líka skilmálar viðkomandi aðila, þar á meðal um afbókun. Við kynnum þér þá áður en bókað er.</li>
+<li>Við berum ekki ábyrgð á efndum þriðju aðila, en við aðstoðum þig við að leysa úr því sem upp kemur.</li>
+</ul>
+<h2 id="abyrgd"><span class="n">8.</span> Ábyrgð</h2>
+<p>Þú berð ábyrgð á tjóni sem þú eða gestir þínir valda á húsnæði, búnaði eða munum á viðburðinum.</p>
+<ul>
+<li>Þú berð ábyrgð á því að upplýsingar sem þú gefur okkur séu réttar, til dæmis um fjölda gesta, ofnæmi og aðgengisþarfir.</li>
+<li>Ábyrgð okkar takmarkast við verð þeirrar þjónustu sem keypt var, nema tjón verði rakið til ásetnings eða stórfellds gáleysis eða annað leiði af ófrávíkjanlegum lögum.</li>
+<li>Við berum ekki ábyrgð á óbeinu tjóni, svo sem tekjutapi.</li>
+</ul>
+<h2 id="ovidradanleg"><span class="n">9.</span> Óviðráðanleg atvik</h2>
+<p>Hvorugur aðili ber ábyrgð á því að geta ekki staðið við samning vegna atvika sem hann ræður ekki við, svo sem náttúruhamfara, óveðurs, farsótta, verkfalla eða fyrirmæla stjórnvalda.</p>
+<p>Komi slíkt upp reynum við fyrst að finna nýja dagsetningu. Takist það ekki endurgreiðum við það sem greitt hefur verið, að frádregnum kostnaði sem þegar hefur fallið til og fæst ekki endurgreiddur frá þriðju aðilum.</p>
+<h2 id="myndir"><span class="n">10.</span> Myndir frá viðburðum</h2>
+<p>Við tökum stundum myndir af uppsetningu og skreytingum til að nota á hurraevents.is og samfélagsmiðlum Húrra Events.</p>
+<ul>
+<li>Myndir þar sem gestir þekkjast birtum við aðeins með samþykki.</li>
+<li>Viljir þú ekki að myndir frá þínum viðburði séu birtar, láttu okkur vita við bókun.</li>
+<li>Þú getur afturkallað samþykki hvenær sem er með pósti á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>.</li>
+</ul>
+<h2 id="personuvernd"><span class="n">11.</span> Persónuvernd</h2>
+<p>Húrra Events er ábyrgðaraðili þeirra persónuupplýsinga sem berast í gegnum hurraevents.is og í samskiptum við okkur og fer með þær samkvæmt lögum nr. 90/2018 um persónuvernd og vinnslu persónuupplýsinga.</p>
+<div class="tbl stack"><table>
+<thead><tr><th scope="col">Upplýsingar</th><th scope="col">Tilgangur</th><th scope="col">Heimild</th></tr></thead>
+<tbody>
+<tr><td data-label="Upplýsingar">Tilefni, nafn, netfang, sími, dagsetning, fjöldi gesta og hugmyndin þín úr fyrirspurnarforminu</td><td data-label="Tilgangur">Svara fyrirspurn og gera tilboð</td><td data-label="Heimild">Ráðstafanir að þinni beiðni áður en samningur er gerður</td></tr>
+<tr><td data-label="Upplýsingar">Nafn, kennitala, heimilisfang og greiðsluupplýsingar</td><td data-label="Tilgangur">Bókun, reikningar og bókhald</td><td data-label="Heimild">Samningur og lagaskylda</td></tr>
+<tr><td data-label="Upplýsingar">Ofnæmi, mataræði og aðgengisþarfir</td><td data-label="Tilgangur">Skipulag viðburðarins</td><td data-label="Heimild">Afdráttarlaust samþykki þitt</td></tr>
+</tbody>
+</table></div>
+<ul>
+<li><b>Vinnsluaðilar:</b> FormSubmit (formsubmit.co) kemur efni fyrirspurnarformsins í tölvupóst til okkar, Google (Google Workspace) hýsir tölvupóstinn og GitHub (GitHub Pages) hýsir vefinn. Sum þessara fyrirtækja eru bandarísk og vinnsla getur því farið fram utan EES.</li>
+<li><b>Varðveisla:</b> Fyrirspurnum sem leiða ekki til bókunar eyðum við eftir 12 mánuði. Bókhaldsgögn varðveitum við í sjö ár frá lokum reikningsárs eins og lög nr. 145/1994 um bókhald gera ráð fyrir.</li>
+<li><b>Engin sala:</b> Við seljum aldrei persónuupplýsingar og notum þær ekki í markaðssetningu nema með samþykki þínu.</li>
+<li><b>Réttindi þín:</b> Þú átt rétt á aðgangi að upplýsingum um þig, leiðréttingu, eyðingu, takmörkun vinnslu og flutningi gagna, og getur andmælt vinnslu og afturkallað samþykki hvenær sem er. Sendu beiðni á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>.</li>
+<li><b>Kvörtun:</b> Þú getur kvartað til <a href="https://www.personuvernd.is">Persónuverndar</a>, postur@personuvernd.is.</li>
+</ul>
+<h2 id="vefurinn"><span class="n">12.</span> Vefurinn</h2>
+<p>hurraevents.is notar engar vafrakökur til greiningar eða auglýsinga.</p>
+<ul>
+<li>Vefurinn geymir eina stillingu í vafranum þínum (sessionStorage) svo upphafssýningin birtist aðeins einu sinni í hverri heimsókn. Hún eyðist þegar flipanum eða vafranum er lokað.</li>
+<li>Leturgerðir vefsins eru sóttar frá Google Fonts og við það fær Google IP-tölu tækisins þíns.</li>
+<li>Vefurinn er hýstur hjá GitHub Pages, sem skráir IP-tölur gesta í öryggisskyni.</li>
+</ul>
+<h2 id="log"><span class="n">13.</span> Lög og breytingar</h2>
+<p>Um skilmálana gilda íslensk lög.</p>
+<ul>
+<li>Komi upp ágreiningur reynum við fyrst að leysa hann í sameiningu. Neytendur geta einnig leitað til kærunefndar vöru- og þjónustukaupa.</li>
+<li>Takist það ekki má reka mál fyrir Héraðsdómi Reykjavíkur.</li>
+<li>Við getum uppfært skilmálana. Gildandi útgáfa er alltaf á hurraevents.is og um hverja bókun gildir sú útgáfa sem var í gildi þegar bókað var.</li>
+<li>Skilmálarnir gilda frá 17. nóvember 2026.</li>
+</ul>
+<p>Spurningar? Sendu okkur línu á <a href="mailto:hurraevents@hurraevents.is">hurraevents@hurraevents.is</a>.</p>
+</div>
+</section>
+<footer style="border-top: 1px solid #2A1B33">
+<div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 15px; color: #D9CCD5">
+<span style="display: flex; align-items: baseline; gap: 10px"><span style="font-family: 'Tilt Neon', sans-serif; font-size: 28px; color: #FFE3F0; text-shadow: 0 0 5px #FF5FA2, 0 0 14px #FF2F8A">húrra</span><span style="font-family: 'Tilt Neon', sans-serif; font-size: 13px; letter-spacing: 0.4em; color: #E6FBFF">events</span></span>
+<span>Þitt tilefni, þitt húrra. · © 2026 Húrra Events</span>
+<a href="skilmalar.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #D9CCD5; text-underline-offset: 3px">Skilmálar og persónuvernd</a>
+</div>
+</footer>
+<script>
+(function(){
+  var root=document.documentElement,hd=document.getElementById('hd'),lastY=window.scrollY;
+  function onHead(){
+    var y=window.scrollY;
+    hd.classList.toggle('is-solid',y>8);
+    if(y>lastY+4&&y>140&&!hd.contains(document.activeElement))hd.classList.add('is-hidden');
+    else if(y<lastY-4||y<=140)hd.classList.remove('is-hidden');
+    lastY=y;
+  }
+  window.addEventListener('scroll',onHead,{passive:true});
+  hd.addEventListener('focusin',function(){hd.classList.remove('is-hidden');});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger'),mClose=document.getElementById('menu-close');
+  function openMenu(){menu.hidden=false;root.classList.add('menu-open');burger.setAttribute('aria-expanded','true');mClose.focus();}
+  function closeMenu(back){menu.hidden=true;root.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');if(back)burger.focus();}
+  burger.addEventListener('click',openMenu);
+  mClose.addEventListener('click',function(){closeMenu(true);});
+  menu.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',function(){closeMenu(false);});});
+  menu.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeMenu(true);return;}
+    if(e.key!=='Tab')return;
+    var f=menu.querySelectorAll('a,button'),first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+})();
+</script>
+</body>
+</html>
