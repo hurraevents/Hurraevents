@@ -377,6 +377,7 @@ img,svg{max-width:100%}
 .ft-replay{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #3A2742;background:transparent;color:#D9CCD5;font:500 14px 'Inter',sans-serif;cursor:pointer}
 .ft-replay:hover{border-color:#FF5FA2;color:#FFFFFF}
 .ft-link{display:inline-flex;align-items:center;min-height:44px;color:#D9CCD5;text-underline-offset:3px}.ft-link:hover{color:#FFFFFF}
+.tk-wait{margin:14px 0 0;font-size:14.5px;line-height:1.5;color:#FFE3F0}
 .tk-legal{margin:16px 0 0;font-size:13.5px;line-height:1.5;color:#B9A9B5}.tk-legal a{color:#FFE3F0;text-underline-offset:2px}
 
 @media (prefers-reduced-motion: reduce){
@@ -751,6 +752,7 @@ html{scroll-behavior:auto}
 <div class="tk-actions">
 <button type="submit" class="tk-submit" id="tk-submit"><span class="tk-spin" aria-hidden="true"></span><span class="tk-btn-t">Senda fyrirspurn</span><svg class="tk-ic" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12091A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
 </div>
+<p class="tk-wait" id="f-bid" role="status" hidden>Þetta getur tekið allt að mínútu. Ekki loka síðunni.</p>
 <p class="tk-legal">Við förum með upplýsingarnar samkvæmt <a href="skilmalar.html#personuvernd">persónuverndarstefnu okkar</a>.</p>
 </div>
 
@@ -976,7 +978,8 @@ html{scroll-behavior:auto}
   }
   function subject(t){return 'Ný fyrirspurn: '+t+' – '+v('f-nafn');}
   function show(which){fields.hidden=which!=='form';done.hidden=which!=='done';fail.hidden=which!=='fail';}
-  function busy(on){btn.disabled=on;btn.classList.toggle('is-busy',on);btnT.textContent=on?'Sendi…':'Senda fyrirspurn';}
+  var slowT=null,bid=document.getElementById('f-bid');
+  function busy(on){btn.disabled=on;btn.classList.toggle('is-busy',on);btnT.textContent=on?'Sendi…':'Senda fyrirspurn';clearTimeout(slowT);bid.hidden=true;if(on)slowT=setTimeout(function(){btnT.textContent='Augnablik…';bid.hidden=false;},5000);}
   function sent(){
     show('done');tk.classList.add('is-sent');
     done.focus({preventScroll:true});
@@ -1008,7 +1011,7 @@ html{scroll-behavior:auto}
     var data={_subject:subject(t),_template:'table',_captcha:'false',_replyto:v('f-netfang')};
     details(t).forEach(function(p){data[p[0]]=p[1];});
     busy(true);
-    var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort();},15000),req;
+    var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort();},90000),req;
     try{req=fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data),signal:ctl?ctl.signal:undefined});}
     catch(x){req=Promise.reject(x);}
     req.then(function(res){return res.json().catch(function(){return{};}).then(function(j){return{ok:res.ok,j:j};});})
