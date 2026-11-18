@@ -752,7 +752,7 @@ html{scroll-behavior:auto}
 <div class="tk-actions">
 <button type="submit" class="tk-submit" id="tk-submit"><span class="tk-spin" aria-hidden="true"></span><span class="tk-btn-t">Senda fyrirspurn</span><svg class="tk-ic" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12091A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button>
 </div>
-<p class="tk-wait" id="f-bid" role="status" hidden>Þetta getur tekið allt að mínútu. Ekki loka síðunni.</p>
+<p class="tk-wait" id="f-bid" role="status" hidden>Þetta tekur aðeins lengri tíma en venjulega. Ekki loka síðunni.</p>
 <p class="tk-legal">Við förum með upplýsingarnar samkvæmt <a href="skilmalar.html#personuvernd">persónuverndarstefnu okkar</a>.</p>
 </div>
 
@@ -950,9 +950,9 @@ html{scroll-behavior:auto}
     if(r.bottom>window.innerHeight)desc.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
   });
 
-  /* Fyrirspurnin: fer beint á netfangið í gegnum FormSubmit (formsubmit.co) */
+  /* Fyrirspurnin: fer beint á hurraevents@hurraevents.is í gegnum Web3Forms (lykillinn má vera opinber) */
   var EMAIL='hurraevents@hurraevents.is';
-  var ENDPOINT='https://formsubmit.co/ajax/'+EMAIL;
+  var ENDPOINT='https://api.web3forms.com/submit',W3F='27869aed-4d58-4a35-b6e6-973676e61010';
   var form=document.getElementById('fyrirspurn'),err=document.getElementById('f-villa'),fields=document.getElementById('tk-form'),done=document.getElementById('f-takk'),fail=document.getElementById('f-fail'),btn=document.getElementById('tk-submit'),btnT=btn.querySelector('.tk-btn-t'),mailA=document.getElementById('f-mailto'),ksec=document.getElementById('hafa-samband');
   function picked(){var r=form.querySelector('input[name="tilefni"]:checked');return r?r.value:'';}
   function joinIs(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' og '+a[a.length-1];}
@@ -1008,10 +1008,10 @@ html{scroll-behavior:auto}
     }
     err.textContent='';
     if(form.elements._honey&&form.elements._honey.value){sent();return;}
-    var data={_subject:subject(t),_template:'table',_captcha:'false',_replyto:v('f-netfang')};
+    var data={access_key:W3F,subject:subject(t),from_name:'hurraevents.is',replyto:v('f-netfang')};
     details(t).forEach(function(p){data[p[0]]=p[1];});
     busy(true);
-    var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort();},90000),req;
+    var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort();},45000),req;
     try{req=fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data),signal:ctl?ctl.signal:undefined});}
     catch(x){req=Promise.reject(x);}
     req.then(function(res){return res.json().catch(function(){return{};}).then(function(j){return{ok:res.ok,j:j};});})
